@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1,0,0,1,-358,-1098)">
+        <g transform="matrix(1,0,0,1,0,1005.88)">
+            <g transform="matrix(0.409625,0,0,0.409625,397.938,132.056)">
+                <g transform="matrix(1,0,0,1,-97.5,-97.5)">
+                    <g id="Monogram">
+                        <path id="Rectangle-path" d="M195,0L195,195L0,195L0,0L195,0ZM161.755,148L161.755,145.799L151.542,135.772C150.64,135.085 150.193,133.955 150.38,132.837L150.38,59.163C150.193,58.045 150.64,56.915 151.542,56.228L162,46.201L162,44L125.795,44L99.986,108.381L70.63,44L32.651,44L32.651,46.201L44.883,60.936C46.084,62.018 46.697,63.608 46.534,65.216L46.534,123.116C46.89,125.204 46.232,127.338 44.761,128.863L31,145.554L31,147.755L70.019,147.755L70.019,145.554L56.258,128.863C54.776,127.341 54.077,125.221 54.362,123.116L54.362,73.042L88.611,147.755L92.586,147.755L122.003,73.042L122.003,132.593C122.003,134.182 122.003,134.488 120.963,135.527L110.383,145.799L110.383,148L161.755,148Z" style="fill:white;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

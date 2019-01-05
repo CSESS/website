@@ -1,0 +1,60 @@
+.select{
+    width: 100%;
+    max-width: 300px;
+}
+.select .select-btn{
+    font-size: 1.1em;
+    font-weight: 600;
+    font-family: inherit;
+    line-height: 1.3em;
+    padding: 5px 15px;
+    color: inherit;
+    cursor: pointer;
+    border: 1px solid #EEE;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #f7f7f7;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    transition: all 150ms ease-in-out;
+}
+.select .select-btn:hover, .select.active .select-btn{
+    background-color: #e0e0e0;
+}
+.select .select-options{
+    width: 100%;
+    max-width: 300px;
+    background-color: #7F4EC9;
+    position: absolute;
+    display: none;
+    -webkit-box-shadow: 0px 2px 12px -3px rgba(0,0,0,0.63);
+    -moz-box-shadow: 0px 2px 12px -3px rgba(0,0,0,0.63);
+    box-shadow: 0px 2px 12px -3px rgba(0,0,0,0.63);
+    border: 1px solid #EEE;
+}
+.select.active .select-options{
+    display: block;
+    margin-top: 2px;
+}
+.select-option{
+    font-size: 1.1em;
+    line-height: 1.3em;
+    padding: 5px 15px;
+    cursor: pointer;
+    text-align: left;
+    background-color: #FFF;
+    font-family: inherit;
+    transition: all 150ms ease-in-out;
+    font-weight: 300;
+    font-family: inherit;
+    line-height: 1.3em;
+    padding: 5px 15px;
+    color: inherit;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+}
+.select-option:hover{
+    background-color: #98FFD9;
+}

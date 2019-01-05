@@ -1,0 +1,155 @@
+.indexPage .activities{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.indexPage .container{
+    margin-top: 20px;
+    max-width: 1100px;
+}
+.activities .activity{
+    height: 250px;
+    width: 250px;
+    background-color: #FFFFFF;
+    color: inherit;
+    text-decoration: inherit;
+}
+.upcomingactivities{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.upcomingactivity{
+    flex-grow: 1;
+    height: 300px;
+    min-width: 300px;
+    background-color: #FFFFFF;
+    margin: 10px !important;
+    align-content: center;
+}
+.activity{
+    overflow: hidden;
+    align-content: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.61);
+    transition: box-shadow 500ms ease-out;
+}
+.activity:hover{
+    box-shadow: 3px 3px 53px -17px rgba(0,0,0,0.61);
+}
+.activity .thumb{
+    height:100%;
+    width: 100%;
+}
+.activity .thumb img{
+    height:100%;
+    width: 100%;
+    object-fit:cover;
+    object-position: top;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 5;
+    transform: scale(1);
+    transition: all 1s ease-out;
+}
+.activity:hover .thumb img{
+    opacity: 1;
+    transform: scale(1.1);
+}
+.activity .activityDetails{
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #3E3E3E;
+    z-index: 6;
+}
+.activity .activityDetails .title{
+    font-size: 1.5em;
+    font-family: 'Baron Neue', sans-serif;
+    text-transform: lowercase;
+    margin-top: -23px;
+    line-height: 1.2em;
+}
+.upcomingactivity .activityDetails{
+    padding: 20px;
+}
+.upcomingactivity .activityDetails .title{
+    font-size: 4em !important;
+    margin-top: -40px;
+}
+
+.activityDetails .title span{
+    background-color: #9CFEDA;
+}
+.activityDetails .date{
+    font-size: 0.8em;
+    font-weight: 800;
+}
+@media (max-width: 500px) {
+    .upcomingactivity{
+        height: 250px;
+    }
+    .upcomingactivity .activityDetails .title{
+        font-size: 2em !important;
+        margin-top: -40px;
+    }
+}
+
+@supports not (display: grid) {
+    .activity .thumb{
+        display: none;
+    }
+    .activityDetails{
+        margin-top: 50px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    @media (max-width: 500px) {
+        .indexPage .activities{
+            margin-top: 5px;
+        }
+        .activities .activity{
+            width: 100%;
+            height: 130px;
+            margin: 10px;
+        }
+    }
+}
+
+
+@supports (display: grid) {
+    .activities{
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, 250px);
+        grid-gap: 20px;
+        grid-auto-rows: auto;
+    }
+    .activity{
+        margin: 0px;
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+    }
+    .activity .thumb{
+        grid-row: 1 / 3;
+        grid-column: 1;
+    }
+    .activityDetails{
+        grid-row: 2 / 3;
+        grid-column: 1;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    @media (max-width: 600px) {
+        .indexPage .activities{
+            display: flex !important;
+            margin-top: 5px;
+        }
+        .activities .activity{
+            width: 100%;
+            height: 130px;
+            margin: 10px;
+        }
+    }
+}
