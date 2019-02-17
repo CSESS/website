@@ -71,7 +71,7 @@ class indexPage extends Component{
         const {upcomingActivities} = this.state;
         return upcomingActivities.map((act, index)=>{
             return (
-                <Link to={`/activity/${act.aid}`} className="activity upcomingactivity" key={index} tabindex="0">
+                <Link to={`/activity/${act.aid}`} className="activity" key={index} tabindex="0">
                     <div className="activityDetails">
                         <div className="title"><span>{shortenString(act.event, 40)}</span></div>
                         <div className="date">{timeago().format(act.starttime)}</div>
@@ -93,7 +93,7 @@ class indexPage extends Component{
             return(
                 <div>
                     <h1>Upcoming Activities</h1>
-                    <div className="upcomingactivities">
+                    <div className="activities">
                         {this.renderUpcomingActivities()}
                     </div>
                 </div>

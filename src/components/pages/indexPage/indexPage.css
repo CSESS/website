@@ -16,20 +16,6 @@
     color: inherit;
     text-decoration: inherit;
 }
-.upcomingactivities{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-.upcomingactivity{
-    flex-grow: 1;
-    height: 300px;
-    min-width: 300px;
-    background-color: #FFFFFF;
-    margin: 10px !important;
-    align-content: center;
-}
 .activity{
     overflow: hidden;
     align-content: center;
