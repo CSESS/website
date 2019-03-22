@@ -7,7 +7,7 @@ class Footer extends Component{
     render(){
         return (
             <footer className="footer">
-                The Computer Science and Engineering Students' Society, the Hong Kong University of Science and Technology Students' Union, Session {SESSION}
+                The Computer Science and Engineering Students' Society, HKUSTSU, Session {SESSION}
             </footer>
         );
     }

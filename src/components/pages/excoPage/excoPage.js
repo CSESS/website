@@ -42,7 +42,9 @@ class excoPage extends Component{
                                     <div className="exco-detail exco-post">{exco.position}</div>
                                     <div className="exco-detail exco-name">{exco.name}</div>
                                     <div className="exco-detail exco-nick">{exco.nickname}</div>
-                                    <div className="exco-detail exco-major">Major: {`${exco.major}${(exco.session === SESSION)?('/'+exco.year):''}`}</div>
+                                    { exco.major &&
+                                        <div className="exco-detail exco-major">Major: {`${exco.major}${(exco.session === SESSION)?('/'+exco.year):''}`}</div>
+                                    }
                                 </div>
                             </div>
                         )

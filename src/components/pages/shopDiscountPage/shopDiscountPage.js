@@ -32,8 +32,6 @@ class shopDiscountPage extends Component{
                             <p>本會一直致力為會員爭取各間商舖的優惠及福利，各會員只需於光顧時出示本會會員卡，即可享有優惠。以下為現時提供優惠之商舖名單：</p>
                             <p>Our society strive our best to provide best welfare to our member. Discount would be offered when you present CSESS membership card upon payment. The following is the company list that provides discount:</p>
 
-                            <p>此外，只要出示學生證，其他不在此名單中的店舖也有機會獲得優惠。</p>
-                            <p>Moreover, by showing your student ID card, other shops might provide discount too.</p>
                         </div>
                         <Table keys={[{id: 'name', display: 'Company Name'}, {id: 'type', display: 'Type'}, {id: 'address', display: 'Address'}, {id: 'discount', display: 'Discount'}]} datas={this.state.shopList}/>
                     </div>
