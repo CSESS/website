@@ -68,6 +68,29 @@
 .activity-desc p{
     margin: 5px 0px 10px;
 }
+.act-page-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.act-page-grid .header-side{
+    width: 95%;
+}
+.act-page-grid .control-side{
+    padding: 10px;
+}
+.act-page-grid .control-side button{
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.act-page-grid .control-side img{
+    width: 24px;
+    height: 24px;
+}
+
 @media (max-width: 650px){
     .activityPage .activity-title{
         font-size: 1.5em;

@@ -1,2 +1,2 @@
-export const TITLE = 'CSESS, HKUSTSU, 18-19';
-export const SESSION = '2018-2019';
+export const TITLE = 'The Computer Science and Engineering Students\' Society, HKUSTSU';
+export const SESSION = '2019-2020';

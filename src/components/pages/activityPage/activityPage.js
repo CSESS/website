@@ -7,6 +7,8 @@ import { TITLE } from '../../../const';
 
 import Loader from '../../loader';
 
+import ShareIcon from '../../../assets/share.svg';
+
 import './activityPage.css';
 
 class activityPage extends Component{
@@ -15,11 +17,16 @@ class activityPage extends Component{
 
         this.state = {
             activity: {},
-            notFound: false
+            notFound: false,
+            couldShare: false
         }
     }
 
     componentDidMount(){
+        if(navigator.share){
+            this.setState({couldShare: true});
+        }
+
         const id = this.props.match.params.id;
         fetch(`https://csess.su.ust.hk/api/activity.php?id=${id}`)
         .then(response => {return response.json()})
@@ -32,8 +39,16 @@ class activityPage extends Component{
             });
     }
 
+    onClickShare(){
+        const {activity} = this.state;
+        if(navigator.share){
+            let url = document.location.href;
+            navigator.share({title: activity.event, url: url});
+        }
+    }
+
     renderData(){
-        const {activity, notFound} = this.state;
+        const {activity, notFound, couldShare} = this.state;
         if(notFound){
             return (
                 <Redirect to="/404/" />
@@ -42,20 +57,29 @@ class activityPage extends Component{
         if(activity){
             return (
                 <div>
-                    <h1 className='pageHeader'>Activity</h1>
-                    <h2 className='activity-title'><span>{activity.event}</span></h2>
-                    <div className='activity-details'>
-                        <div className='activity-detail'>
-                            <div className='title'>Start Time</div>
-                            <div className='text'>{activity.starttime}</div>
+                    <div className="act-page-grid">
+                        <div className="header-side">
+                            <h1 className='pageHeader'>Activity</h1>
+                            <h2 className='activity-title'><span>{activity.event}</span></h2>
+                            <div className='activity-details'>
+                                <div className='activity-detail'>
+                                    <div className='title'>Start Time</div>
+                                    <div className='text'>{activity.starttime}</div>
+                                </div>
+                                <div className='activity-detail'>
+                                    <div className='title'>End Time</div>
+                                    <div className='text'>{activity.endtime}</div>
+                                </div>
+                                <div className='activity-detail'>
+                                    <div className='detail title'>Venue</div>
+                                    <div className='detail text'>{activity.venue}</div>
+                                </div>
+                            </div>
                         </div>
-                        <div className='activity-detail'>
-                            <div className='title'>End Time</div>
-                            <div className='text'>{activity.endtime}</div>
-                        </div>
-                        <div className='activity-detail'>
-                            <div className='detail title'>Venue</div>
-                            <div className='detail text'>{activity.venue}</div>
+                        <div className="control-side">
+                            {couldShare &&
+                                <button onClick={this.onClickShare.bind(this)}><img src={ShareIcon} alt="Share" /></button>
+                            }
                         </div>
                     </div>
                     <div className='activity-desc'>
