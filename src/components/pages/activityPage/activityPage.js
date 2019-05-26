@@ -8,6 +8,7 @@ import { TITLE } from '../../../const';
 import Loader from '../../loader';
 
 import ShareIcon from '../../../assets/share.svg';
+import CalendarIcon from '../../../assets/calendar.svg';
 
 import './activityPage.css';
 
@@ -48,6 +49,7 @@ class activityPage extends Component{
     }
 
     renderData(){
+        const id = this.props.match.params.id;
         const {activity, notFound, couldShare} = this.state;
         if(notFound){
             return (
@@ -77,9 +79,16 @@ class activityPage extends Component{
                             </div>
                         </div>
                         <div className="control-side">
-                            {couldShare &&
-                                <button onClick={this.onClickShare.bind(this)}><img src={ShareIcon} alt="Share" /></button>
-                            }
+                                {couldShare &&
+                                    (
+                                        <div className="control-item" onClick={this.onClickShare.bind(this)}>
+                                            <img src={ShareIcon} alt="Share" />
+                                        </div>
+                                    )
+                                }
+                            <div className="control-item">
+                                <a href={`https://csess.su.ust.hk/api/ical.php?id=${id}`} download><img src={CalendarIcon} alt="Download iCal" /></a>
+                            </div>
                         </div>
                     </div>
                     <div className='activity-desc'>

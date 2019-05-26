@@ -74,21 +74,25 @@
     justify-content: space-between;
 }
 .act-page-grid .header-side{
-    width: 95%;
+    width: 90%;
 }
 .act-page-grid .control-side{
-    padding: 10px;
-}
-.act-page-grid .control-side button{
-    padding: 5px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-start;
 }
 .act-page-grid .control-side img{
     width: 24px;
     height: 24px;
+}
+.control-side .control-item{
+    padding: 5px;
+    width: 24px;
+    height: 24px;
+    margin: 5px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 @media (max-width: 650px){
