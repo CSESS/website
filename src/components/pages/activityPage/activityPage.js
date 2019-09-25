@@ -2,6 +2,8 @@ import React, {Component, Fragment} from 'react';
 
 import DocumentTitle from 'react-document-title';
 import { Redirect } from 'react-router-dom';
+import { Helmet } from "react-helmet";
+import { size } from 'lodash';
 
 import { TITLE } from '../../../const';
 
@@ -56,9 +58,15 @@ class activityPage extends Component{
                 <Redirect to="/404/" />
             );
         }
-        if(activity){
+        if(size(activity) > 0){
             return (
                 <div>
+                    <Helmet>
+                        <meta name="Description" content={activity.description.replace(/<[^>]*>?/gm, '').substring(0, 150)} />
+                        <meta property="og:title" content={`${activity.event ? activity.event : 'Activity'} | ${TITLE}`} />
+                        <meta property="og:image" content={activity.thumb} />
+                        <meta property="og:description" content={activity.description.replace(/<[^>]*>?/gm, '').substring(0, 150)} />
+                    </Helmet>
                     <div className="act-page-grid">
                         <div className="header-side">
                             <h1 className='pageHeader'>Activity</h1>

@@ -24,21 +24,27 @@ class indexPage extends Component{
 
         this.state = {
             activities: [],
-            isLoading: true
+            isLoading: true,
+            hasError: false
         }
     }
     componentDidMount(){
         fetch('https://csess.su.ust.hk/api/activities.php')
         .then(response => {return response.json()})
-            .then(data => this.setState({activities: data, isLoading: false}));
+            .then(data => this.setState({activities: data, isLoading: false}))
+            .catch(error => this.setState({hasError: true}));
 
         fetch('https://csess.su.ust.hk/api/activities.php?type=upcoming')
         .then(response => {return response.json()})
-            .then(data => this.setState({upcomingActivities: data}));
+            .then(data => this.setState({upcomingActivities: data}))
+            .catch(error => this.setState({ hasError: true }));
     }
 
     renderActivities(){
-        const {activities, isLoading} = this.state;
+        const {activities, isLoading, hasError} = this.state;
+        if(hasError){
+            return <div>We have encountered an error while fetching data, please try again later.</div>
+        }
         if(!activities || isLoading){
             return (
                 <Fragment>

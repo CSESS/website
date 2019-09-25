@@ -12,18 +12,23 @@ class societyProductPage extends Component{
         super(props);
 
         this.state = {
-            products: []
+            products: [],
+            isLoading: false
         }
     }
 
     componentDidMount(){
+        this.setState({ isLoading: true });
         fetch('https://csess.su.ust.hk/api/societyProducts.php')
         .then(response => {return response.json()})
-            .then(data => this.setState({products: data}));
+            .then(data => this.setState({products: data, isLoading: false}));
     }
 
     renderSocietyProducts(){
-        const products = this.state.products;
+        const {products, isLoading} = this.state;
+        if (isLoading){
+            return <Loader />;
+        }
         if(products && products.length > 0){
             return products.map((product)=>{
                 if(product.type === 'BUNDLE'){
@@ -43,7 +48,7 @@ class societyProductPage extends Component{
                 );
             });
         }else{
-            return <Loader />;
+            return <div>Society Products Coming Soon...</div>
         }
     }
 
