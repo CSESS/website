@@ -15,8 +15,8 @@ const listItems = [
             displayName: 'About Us',
             child: [
                 {
-                    path: '/about/',
-                    displayName: 'History'
+                    path: '/about/faq/',
+                    displayName: 'FAQ 常見問題'
                 },
                 {
                     path: '/about/exco/',

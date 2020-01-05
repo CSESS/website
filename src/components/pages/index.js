@@ -12,6 +12,7 @@ import societyProductPage from './societyProductPage/societyProductPage';
 import pastActivityPage from './pastActivityPage/pastActivityPage';
 import currentActivitiesPage from './currentActivitiesPage/currentActivitiesPage';
 import activityPage from './activityPage/activityPage';
+import faqPage from './faqPage/faqPage';
 import notFoundPage from './notFoundPage/notFoundPage';
 
 export {
@@ -29,5 +30,6 @@ export {
     pastActivityPage,
     currentActivitiesPage,
     activityPage,
+    faqPage,
     notFoundPage
  };

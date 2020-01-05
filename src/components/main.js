@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
-import {indexPage, aboutPage, sportPage, linkPage, excoPage, honMemPage, docPage, shopDiscountPage, welfareProductPage, publicationPage, societyProductPage, pastActivityPage, currentActivitiesPage, activityPage, notFoundPage} from './pages';
+import {indexPage, aboutPage, sportPage, linkPage, excoPage, honMemPage, faqPage, docPage, shopDiscountPage, welfareProductPage, publicationPage, societyProductPage, pastActivityPage, currentActivitiesPage, activityPage, notFoundPage} from './pages';
 import Header from './header';
 
 import './main.css';
@@ -19,6 +19,7 @@ function Main(){
                 <Route exact path="/about/exco/" component={excoPage}/>
                 <Route exact path="/about/document/" component={docPage}/>
                 <Route exact path="/about/honary-member/" component={honMemPage}/>
+                <Route exact path="/about/faq/" component={faqPage} />
                 <Route exact path="/about/" component={aboutPage}/>
                 <Route exact path="/sports/" component={sportPage}/>
                 <Route exact path="/welfare/" component={societyProductPage}/>
