@@ -7,7 +7,7 @@ import './faqPage.css';
 
 export default function (props) {
     return (
-        <DocumentTitle title={`FAQ | ${TITLE}`}>
+        <DocumentTitle title={`FAQ 常見問題 | ${TITLE}`}>
             <div className="faqPage" lang="zh-Hant">
                 <div className="container">
                     <h1 className="pageHeader">FAQ</h1>

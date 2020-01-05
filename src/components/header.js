@@ -7,12 +7,14 @@ import Logo from '../assets/logo.svg';
 import cons from '../assets/website_cons.svg';
 import csess from '../assets/website_csess.svg';
 
+import { TITLE } from '../const';
+
 class Header extends Component{
     render(){
         let isHome = (this.props.location.pathname === '/');
         return (
             <div className={`box-header ${isHome?'tall':''}`}>
-                <Link to="/" className="logo"><img src={Logo} alt="csess logo" /></Link>
+                <Link to="/" className="logo"><img src={Logo} alt={TITLE} /></Link>
                 <div className="header-social-media">
                     <a href="https://www.facebook.com/CSESSHKUSTSU" target="_blank" rel="noopener noreferrer">
                         <img src={require('../assets/fb-white.svg')} alt="Facebook"/>

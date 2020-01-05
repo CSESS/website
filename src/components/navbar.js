@@ -19,6 +19,10 @@ const listItems = [
                     displayName: 'FAQ 常見問題'
                 },
                 {
+                    path: '/about/',
+                    displayName: 'History'
+                },
+                {
                     path: '/about/exco/',
                     displayName: 'Ex-co'
                 },
