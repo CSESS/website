@@ -7,7 +7,7 @@ import './faqPage.css';
 
 export default function (props) {
     return (
-        <DocumentTitle title={`FAQ 常見問題 | ${TITLE}`}>
+        <DocumentTitle title={`科大 CS 常見問題 | ${TITLE}`}>
             <div className="faqPage" lang="zh-Hant">
                 <div className="container">
                     <h1 className="pageHeader">FAQ</h1>
@@ -60,7 +60,7 @@ export default function (props) {
                             如果你係經 JUPAS 入嚟嘅話，School of Enginnering 要求同學最少修讀一科理科 (Physics/Chemistry/Biology/Combined Science) ，冇讀理科嘅同學可以用 ICT 填補呢個要求，不過只有 Best Science Subject 先會有 Double Count。如果你中學冇讀理科，又冇讀 ICT ，咁你就無緣經 Jupas 入讀科大 CS 喇！
                         </p>
                         <p>
-                            讀過 ICT 嘅同學因為中學都會有少少編程嘅經驗，喺 Programming 方面會較快上手，不過冇讀 ICT 嘅同學都唔需要灰心！只要你俾多少少時時追返啲 Programming 嘅技巧，你一樣可以讀多好開心。讀過 ICT 嘅同學千其唔好輕敵呀，因為 Programming 只係估 CS 嘅一少部份，你哋喺 Programming 以外嘅領域係同其他同學平起平坐㗎！
+                            讀過 ICT 嘅同學因為中學都會有少少編程嘅經驗，喺 Programming 方面會較快上手，不過冇讀 ICT 嘅同學都唔需要灰心！只要你俾多少少時時追返啲 Programming 嘅技巧，你一樣可以讀多好開心。讀過 ICT 嘅同學千其唔好輕敵呀，因為 Programming 只係佔 CS 嘅一少部份，你哋喺 Programming 以外嘅領域係同其他同學平起平坐㗎！
                         </p>
                     </div>
                     <div className='section'>
