@@ -2,14 +2,38 @@ import React, {Component, Fragment} from 'react';
 import DocumentTitle from 'react-document-title';
 import { withRouter, Link } from 'react-router-dom';
 
-import timeago from 'timeago.js';
+// import timeago from 'timeago.js';
 
 import { TITLE } from '../../../const';
 
 import './indexPage.css';
 
 import HomeLoader from './homeLoader';
+function timeAgo(timestamp, locale = 'en') {
+    let value;
+    const diff = (new Date().getTime() - new Date(timestamp).getTime()) / 1000;
+    const minutes = Math.floor(diff / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    const months = Math.floor(days / 30);
+    const years = Math.floor(months / 12);
+    const rtf = new Intl.RelativeTimeFormat(locale, { numeric: "auto" });
 
+    if (years > 0) {
+        value = rtf.format(0 - years, "year");
+    } else if (months > 0) {
+        value = rtf.format(0 - months, "month");
+    } else if (days > 0) {
+        value = rtf.format(0 - days, "day");
+    } else if (hours > 0) {
+        value = rtf.format(0 - hours, "hour");
+    } else if (minutes > 0) {
+        value = rtf.format(0 - minutes, "minute");
+    } else {
+        value = rtf.format(0 - diff, "second");
+    }
+    return value;
+}
 function shortenString(str, length){
     if (str.length > length) {
       return str.substring(0, length - 3) + '...';
@@ -63,7 +87,7 @@ class indexPage extends Component{
                 <Link to={`/activity/${act.aid}`} className="activity" key={index}>
                     <div className="activityDetails">
                         <div className="title"><span>{shortenString(act.event, 60)}</span></div>
-                        <div className="date">{timeago().format(act.starttime)}</div>
+                        <div className="date">{timeAgo(act.starttime)}</div>
                     </div>
                     <div className="thumb">
                         <img src={act.thumb} alt={act.event}/>
@@ -80,7 +104,7 @@ class indexPage extends Component{
                 <Link to={`/activity/${act.aid}`} className="activity" key={index} tabindex="0">
                     <div className="activityDetails">
                         <div className="title"><span>{shortenString(act.event, 40)}</span></div>
-                        <div className="date">{timeago().format(act.starttime)}</div>
+                        <div className="date">{timeAgo(act.starttime)}</div>
                     </div>
                     <div className="thumb">
                         <img src={act.thumb} alt={act.event}/>
