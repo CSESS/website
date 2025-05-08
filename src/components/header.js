@@ -14,16 +14,16 @@ class Header extends Component{
             <div className={`box-header ${isHome?'tall':''}`}>
                 <Link to="/" className="logo"><img src={Logo} alt="CSESS, HKUSTSU" /></Link>
                 <div className="header-social-media">
-                    <a href="https://www.facebook.com/CSESSHKUSTSU" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/csess.hkustsu/" target="_blank" rel="noopener noreferrer">
                         <img src={require('../assets/fb-white.svg')} alt="Facebook"/>
                     </a>
-                    <a href="https://www.instagram.com/csess.ust/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/csess.hkustsu/" target="_blank" rel="noopener noreferrer">
                         <img src={require('../assets/ig-white.svg')} alt="Instagram"/>
                     </a>
-                    <a href="https://www.youtube.com/channel/UCo8N6zHE3oUme-9tkoJMJYQ" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.youtube.com/@CSESSHKUSTSU" target="_blank" rel="noopener noreferrer">
                         <img src={require('../assets/yt-white.svg')} alt="Youtube"/>
                     </a>
-                    <a href="https://medium.com/@ustcsess" target="_blank" rel="noopener noreferrer">
+                    <a href="https://ustcsess.medium.com/" target="_blank" rel="noopener noreferrer">
                         <img src={require('../assets/medium-white.svg')} alt="Medium"/>
                     </a>
                 </div>

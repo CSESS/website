@@ -91,11 +91,11 @@ export default function (props) {
                         <h2 className='highlighted'>我嚟緊就會嚟科大讀，咁我有冇啲咩需要準備㗎？</h2>
                         <p>
                             如果想喺正式入學之前，學下 CS 嘅知識增值下自己，可以睇返我哋之前寫嘅一篇Blog Post：<br/>
-                            <a href="https://medium.com/@ustcsess/hkust-%E6%BA%96-cs-%E5%AD%B8%E7%94%9F%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E9%A4%8A-69969a146326" target="_blank" rel="noopener noreferrer">[HKUST] (準) CS 學生的自我修養</a>
+                            <a href="https://ustcsess.medium.com//hkust-%E6%BA%96-cs-%E5%AD%B8%E7%94%9F%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E9%A4%8A-69969a146326" target="_blank" rel="noopener noreferrer">[HKUST] (準) CS 學生的自我修養</a>
                         </p>
                         <p>
                             如果想知道 Reg Day 嘅流程，就可以睇下我哋嘅 Reg Day 攻略：<br/>
-                            <a href="https://medium.com/@ustcsess/2018-hkust-reg-day-%E6%94%BB%E7%95%A5-%E7%A7%91%E5%A4%A7cs-61c1b31eac7" target="_blank" rel="noopener noreferrer">HKUST Reg Day 攻略| 科大CS - CSESS HKUST</a>
+                            <a href="https://ustcsess.medium.com//2018-hkust-reg-day-%E6%94%BB%E7%95%A5-%E7%A7%91%E5%A4%A7cs-61c1b31eac7" target="_blank" rel="noopener noreferrer">HKUST Reg Day 攻略| 科大CS - CSESS HKUST</a>
                         </p>
                     </section>
                     <section className='section'>

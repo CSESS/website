@@ -38,22 +38,22 @@ export default function(props){
                         <div className="contact-info">
                             <h3>Email</h3>
                             <div>
-                                <a href="mailto:su_csess@ust.hk">su_csess@ust.hk</a>
+                                <a href="mailto:su_csess@connect.ust.hk">su_csess@connect.ust.hk</a>
                             </div>
                         </div>
                         <div className="contact-info">
                             <h3>Social Media</h3>
                             <div className="social-media">
-                                <a href="https://www.facebook.com/CSESSHKUSTSU" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.facebook.com/csess.hkustsu/" target="_blank" rel="noopener noreferrer">
                                     <img src={require('../../../assets/fb.svg')} alt="Facebook"/>
                                 </a>
-                                <a href="https://www.instagram.com/csess.ust/" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.instagram.com/csess.hkustsu/" target="_blank" rel="noopener noreferrer">
                                     <img src={require('../../../assets/ig.svg')} alt="Instagram"/>
                                 </a>
-                                <a href="https://www.youtube.com/channel/UCo8N6zHE3oUme-9tkoJMJYQ" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.youtube.com/@CSESSHKUSTSU" target="_blank" rel="noopener noreferrer">
                                     <img src={require('../../../assets/yt.svg')} alt="Youtube"/>
                                 </a>
-                                <a href="https://medium.com/@ustcsess" target="_blank" rel="noopener noreferrer">
+                                <a href="https://ustcsess.medium.com/" target="_blank" rel="noopener noreferrer">
                                     <img src={require('../../../assets/medium.svg')} alt="Medium"/>
                                 </a>
                             </div>
