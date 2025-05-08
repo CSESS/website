@@ -21,7 +21,7 @@ class publicationPage extends Component{
     }
 
     componentDidMount(){
-        fetch('https://csess.su.ust.hk/api/publications.php')
+        fetch('https://csess.su.hkust.edu.hk/api/publications.php')
         .then(response => {return response.json()})
             .then(data => {
                 let pup = groupBy(data, 'session');

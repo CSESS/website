@@ -17,7 +17,7 @@ class honMemPage extends Component{
     }
 
     componentDidMount(){
-        fetch('https://csess.su.ust.hk/api/honmem.php')
+        fetch('https://csess.su.hkust.edu.hk/api/honmem.php')
         .then(response => {return response.json()})
             .then(data => this.setState({honMemList: data}));
     }

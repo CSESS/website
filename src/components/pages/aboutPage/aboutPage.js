@@ -12,7 +12,7 @@ export default function(props){
                 <div className="container">
                     <h1 className="pageHeader">About Us</h1>
                     <div className="header-image">
-                        <img src="https://csess.su.ust.hk/home/images/history.jpg" alt="CSESS" />
+                        <img src="https://csess.su.hkust.edu.hk/home/images/history.jpg" alt="CSESS" />
                     </div>
                     <div>
                         <h2 className='highlighted'>History</h2>

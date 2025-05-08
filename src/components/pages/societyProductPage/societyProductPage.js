@@ -19,7 +19,7 @@ class societyProductPage extends Component{
 
     componentDidMount(){
         this.setState({ isLoading: true });
-        fetch('https://csess.su.ust.hk/api/societyProducts.php')
+        fetch('https://csess.su.hkust.edu.hk/api/societyProducts.php')
         .then(response => {return response.json()})
             .then(data => this.setState({products: data, isLoading: false}));
     }

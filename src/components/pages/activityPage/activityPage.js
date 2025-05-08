@@ -31,7 +31,7 @@ class activityPage extends Component{
         }
 
         const id = this.props.match.params.id;
-        fetch(`https://csess.su.ust.hk/api/activity.php?id=${id}`)
+        fetch(`https://csess.su.hkust.edu.hk/api/activity.php?id=${id}`)
         .then(response => {return response.json()})
             .then(data => {
                 if(data.error){
@@ -95,7 +95,7 @@ class activityPage extends Component{
                                     )
                                 }
                             <div className="control-item">
-                                <a href={`https://csess.su.ust.hk/api/ical.php?id=${id}`} download><img src={CalendarIcon} alt="Download iCal" /></a>
+                                <a href={`https://csess.su.hkust.edu.hk/api/ical.php?id=${id}`} download><img src={CalendarIcon} alt="Download iCal" /></a>
                             </div>
                         </div>
                     </div>

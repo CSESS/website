@@ -21,7 +21,7 @@ class welfareProductPage extends Component{
     }
 
     componentDidMount(){
-        fetch('https://csess.su.ust.hk/api/welfareProducts.php')
+        fetch('https://csess.su.hkust.edu.hk/api/welfareProducts.php')
         .then(response => {return response.json()})
             .then(data => {
                 let prod = groupBy(data, 'session');

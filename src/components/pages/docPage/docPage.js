@@ -17,7 +17,7 @@ class docPage extends Component{
     }
 
     componentDidMount(){
-        fetch('https://csess.su.ust.hk/api/documents.php')
+        fetch('https://csess.su.hkust.edu.hk/api/documents.php')
         .then(response => {return response.json()})
             .then(data => this.setState({docs: data}));
     }

@@ -19,7 +19,7 @@ class sportPage extends Component{
     }
 
     componentDidMount(){
-        fetch('https://csess.su.ust.hk/api/sportTeam.php?type=Football')
+        fetch('https://csess.su.hkust.edu.hk/api/sportTeam.php?type=Football')
         .then(response => {return response.json()})
             .then(data => this.setState({memberList: data}));
     }
@@ -27,7 +27,7 @@ class sportPage extends Component{
     handleTeamSelect(selected){
         this.setState({sportType: selected});
 
-        fetch(`https://csess.su.ust.hk/api/sportTeam.php?type=${selected}`)
+        fetch(`https://csess.su.hkust.edu.hk/api/sportTeam.php?type=${selected}`)
         .then(response => {return response.json()})
             .then(data => this.setState({memberList: data}));
     }

@@ -19,11 +19,11 @@ class excoPage extends Component{
     }
 
     componentDidMount(){
-        fetch(`https://csess.su.ust.hk/api/excos.php?session=${this.state.session}`)
+        fetch(`https://csess.su.hkust.edu.hk/api/excos.php?session=${this.state.session}`)
         .then(response => {return response.json()})
             .then(data => this.setState({excos: data}));
 
-            fetch('https://csess.su.ust.hk/api/sessions.php')
+            fetch('https://csess.su.hkust.edu.hk/api/sessions.php')
             .then(response => {return response.json()})
                 .then(data => this.setState({sessionList: data}));
     }
@@ -37,7 +37,7 @@ class excoPage extends Component{
                     excos.map((exco)=>{
                         return (
                             <div className="exco" key={exco.sequence}>
-                                <img className="exco-img" src={`https://csess.su.ust.hk/home/images/exco/${exco.session}/${exco.nickname}.jpg`} alt={exco.name}/>
+                                <img className="exco-img" src={`https://csess.su.hkust.edu.hk/home/images/exco/${exco.session}/${exco.nickname}.jpg`} alt={exco.name}/>
                                 <div className="exco-desc">
                                     <div className="exco-detail exco-post">{exco.position}</div>
                                     <div className="exco-detail exco-name">{exco.name}</div>
@@ -62,7 +62,7 @@ class excoPage extends Component{
     handleSelectChange(select){
         this.setState({session: select, excos: []});
 
-        fetch(`https://csess.su.ust.hk/api/excos.php?session=${select}`)
+        fetch(`https://csess.su.hkust.edu.hk/api/excos.php?session=${select}`)
         .then(response => {return response.json()})
             .then(data => this.setState({excos: data}));
     }

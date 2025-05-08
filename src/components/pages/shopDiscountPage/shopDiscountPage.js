@@ -17,7 +17,7 @@ class shopDiscountPage extends Component{
     }
 
     componentDidMount(){
-        fetch('https://csess.su.ust.hk/api/shops.php')
+        fetch('https://csess.su.hkust.edu.hk/api/shops.php')
         .then(response => {return response.json()})
             .then(data => this.setState({shopList: data}));
     }
