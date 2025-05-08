@@ -29,12 +29,12 @@ class indexPage extends Component{
         }
     }
     componentDidMount(){
-        fetch('https://csess.su.ust.hk/api/activities.php')
+        fetch('https://csess.su.hkust.edu.hk/api/activities.php')
         .then(response => {return response.json()})
             .then(data => this.setState({activities: data, isLoading: false}))
             .catch(error => this.setState({hasError: true}));
 
-        fetch('https://csess.su.ust.hk/api/activities.php?type=upcoming')
+        fetch('https://csess.su.hkust.edu.hk/api/activities.php?type=upcoming')
         .then(response => {return response.json()})
             .then(data => this.setState({upcomingActivities: data}))
             .catch(error => this.setState({ hasError: true }));

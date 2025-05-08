@@ -29,7 +29,7 @@ class currentActivitiesPage extends Component{
     }
 
     componentDidMount(){
-        fetch('https://csess.su.ust.hk/api/activities.php?type=current')
+        fetch('https://csess.su.hkust.edu.hk/api/activities.php?type=current')
         .then(response => {return response.json()})
             .then(data => this.setState({activities: data}));
     }

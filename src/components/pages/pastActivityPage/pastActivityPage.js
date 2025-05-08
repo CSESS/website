@@ -25,7 +25,7 @@ class pastActivityPage extends Component{
     }
 
     componentDidMount(){
-        fetch('https://csess.su.ust.hk/api/activities.php?type=past')
+        fetch('https://csess.su.hkust.edu.hk/api/activities.php?type=past')
         .then(response => {return response.json()})
             .then(data => this.setState({activities: data}));
     }
