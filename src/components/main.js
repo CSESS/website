@@ -18,7 +18,7 @@ function Main(){
                 <Route exact path="/activity/:id" component={activityPage}/>
                 <Route exact path="/about/exco/" component={excoPage}/>
                 <Route exact path="/about/document/" component={docPage}/>
-                <Route exact path="/about/honary-member/" component={honMemPage}/>
+                <Route exact path="/about/honorary-member/" component={honMemPage}/>
                 <Route exact path="/about/faq/" component={faqPage} />
                 <Route exact path="/about/" component={aboutPage}/>
                 <Route exact path="/sports/" component={sportPage}/>

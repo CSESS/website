@@ -31,8 +31,8 @@ const listItems = [
                     displayName: 'Document'
                 },
                 {
-                    path: '/about/honary-member/',
-                    displayName: 'Honary Members'
+                    path: '/about/honorary-member/',
+                    displayName: 'Honorary Members'
                 }
             ]
         },
