@@ -1,14 +1,14 @@
-.shopDiscount{
-    background-color: #FFFFFF;
-    color: #3e3e3e;
-    border-radius: 0 0 5px 5px;
-    margin-top: 15px;
+.shopDiscount {
+  background-color: #ffffff;
+  color: #3e3e3e;
+  border-radius: 0 0 5px 5px;
+  margin-top: 15px;
 }
-.shopDiscount .pageHeader{
-    margin-bottom: 10px;
-    line-height: 1em;
+.shopDiscount .pageHeader {
+  margin-bottom: 10px;
+  line-height: 1em;
 }
-.shopDiscount .container{
-    margin-top: 20px;
-    max-width: 1100px;
+.shopDiscount .container {
+  margin-top: 20px;
+  max-width: 1100px;
 }

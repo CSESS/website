@@ -1,14 +1,14 @@
-.honMemPage{
-    background-color: #FFFFFF;
-    color: #3e3e3e;
-    border-radius: 0 0 5px 5px;
-    margin-top: 15px;
+.honMemPage {
+  background-color: #ffffff;
+  color: #3e3e3e;
+  border-radius: 0 0 5px 5px;
+  margin-top: 15px;
 }
-.honMemPage .pageHeader{
-    margin-bottom: 10px;
-    line-height: 1em;
+.honMemPage .pageHeader {
+  margin-bottom: 10px;
+  line-height: 1em;
 }
-.honMemPage .container{
-    margin-top: 20px;
-    max-width: 1100px;
+.honMemPage .container {
+  margin-top: 20px;
+  max-width: 1100px;
 }

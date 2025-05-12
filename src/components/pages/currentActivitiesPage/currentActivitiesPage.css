@@ -1,32 +1,32 @@
-.currentActivitiesPage{
-    background-color: #FFFFFF;
-    color: #3e3e3e;
-    border-radius: 0 0 5px 5px;
-    margin-top: 25px;
+.currentActivitiesPage {
+  background-color: #ffffff;
+  color: #3e3e3e;
+  border-radius: 0 0 5px 5px;
+  margin-top: 25px;
 }
-.currentActivitiesPage .pageHeader{
-    margin-bottom: 10px;
+.currentActivitiesPage .pageHeader {
+  margin-bottom: 10px;
 }
-.currentActivitiesPage .container{
-    margin-top: 25px;
-    max-width: 1100px;
-    padding-bottom: 20px;
+.currentActivitiesPage .container {
+  margin-top: 25px;
+  max-width: 1100px;
+  padding-bottom: 20px;
 }
-.currentActivitiesPage .activities{
-    justify-content: center;
+.currentActivitiesPage .activities {
+  justify-content: center;
 }
-.currentActivitiesPage .activity{
-    color: inherit;
-    text-decoration: inherit;
-    box-shadow: 3px 3px 53px -17px rgba(0,0,0,0.61);
+.currentActivitiesPage .activity {
+  color: inherit;
+  text-decoration: inherit;
+  box-shadow: 3px 3px 53px -17px rgba(0, 0, 0, 0.61);
 }
-.currentActivitiesPage .activity .thumb{
-    background-color: #7F4EC9;
+.currentActivitiesPage .activity .thumb {
+  background-color: #7f4ec9;
 }
 @media (max-width: 600px) {
-    .currentActivitiesPage .activities{
-        display: flex !important;
-        flex-wrap: wrap;
-        margin-top: 5px;
-    }
+  .currentActivitiesPage .activities {
+    display: flex !important;
+    flex-wrap: wrap;
+    margin-top: 5px;
+  }
 }

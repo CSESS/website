@@ -1,65 +1,65 @@
-.welfareProducts{
-    background-color: #FFFFFF;
-    color: #3e3e3e;
-    border-radius: 0 0 5px 5px;
-    margin-top: 15px;
+.welfareProducts {
+  background-color: #ffffff;
+  color: #3e3e3e;
+  border-radius: 0 0 5px 5px;
+  margin-top: 15px;
 }
-.welfareProducts .pageHeader{
-    margin-bottom: 0px;
+.welfareProducts .pageHeader {
+  margin-bottom: 0px;
 }
-.welfareProducts .container{
-    margin-top: 20px;
-    max-width: 1100px;
+.welfareProducts .container {
+  margin-top: 20px;
+  max-width: 1100px;
 }
-.welfareProducts h2{
-    margin: 15px 5px 5px;
+.welfareProducts h2 {
+  margin: 15px 5px 5px;
 }
-.welfareProducts .welfare-products{
-    display: flex;
-    flex-wrap: wrap;
+.welfareProducts .welfare-products {
+  display: flex;
+  flex-wrap: wrap;
 }
-.welfareProducts .welfare-product{
-    width: 350px;
-    height: 300px;
-    margin: 5px;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 90% 10%;
-    grid-template-columns: 100%;
-    box-shadow: 7px 7px 36px -9px rgba(0,0,0,0.2);
+.welfareProducts .welfare-product {
+  width: 350px;
+  height: 300px;
+  margin: 5px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 90% 10%;
+  grid-template-columns: 100%;
+  box-shadow: 7px 7px 36px -9px rgba(0, 0, 0, 0.2);
 }
-.welfare-product .product-image{
-    height:100%;
-    width: 100%;
-    grid-row: 1 / span 2;
-    grid-column: 1;
+.welfare-product .product-image {
+  height: 100%;
+  width: 100%;
+  grid-row: 1 / span 2;
+  grid-column: 1;
 }
-.welfare-product img{
-    height:100%;
-    width: 100%;
-    object-fit:contain;
-    object-position: center;
-    transform: scale(1);
-    transition: transform 500ms ease-out;
+.welfare-product img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+  transform: scale(1);
+  transition: transform 500ms ease-out;
 }
-.welfare-product:hover img{
-    transform: scale(1.05);
+.welfare-product:hover img {
+  transform: scale(1.05);
 }
-.welfare-product .description{
-    grid-row: 2 / span 1;
-    grid-column: 1;
-    z-index: 5;
-    background-color: #FFF;
+.welfare-product .description {
+  grid-row: 2 / span 1;
+  grid-column: 1;
+  z-index: 5;
+  background-color: #fff;
 }
-.welfare-product .description .product-name{
-    margin-left: 10px;
-    margin-right: 5px;
-    margin-top: -15px;
+.welfare-product .description .product-name {
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-top: -15px;
 }
-.welfare-product .description span{
-    font-size: 2em;
-    font-family: 'Baron Neue', sans-serif;
-    text-transform: lowercase;
-    line-height: 1.1em;
-    background-color: #9CFEDA;
+.welfare-product .description span {
+  font-size: 2em;
+  font-family: "Baron Neue", sans-serif;
+  text-transform: lowercase;
+  line-height: 1.1em;
+  background-color: #9cfeda;
 }

@@ -1,12 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import './homeLoader.css';
+import "./homeLoader.css";
 
-const HomeLoader = function(){
-    return (
-        <div className="homeLoader">
-        </div>
-    );
-}
+const HomeLoader = function () {
+  return <div className="homeLoader"></div>;
+};
 
 export default HomeLoader;

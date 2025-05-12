@@ -1,46 +1,46 @@
-.notFoundPage{
-    background-color: #FFFFFF;
-    color: #3e3e3e;
-    border-radius: 0 0 5px 5px;
-    margin-top: 25px;
+.notFoundPage {
+  background-color: #ffffff;
+  color: #3e3e3e;
+  border-radius: 0 0 5px 5px;
+  margin-top: 25px;
 }
-.notFoundPage .pageHeader{
-    margin-bottom: 5px;
+.notFoundPage .pageHeader {
+  margin-bottom: 5px;
 }
-.notFoundPage .container{
-    max-width: 1100px;
-    box-sizing: border-box;
-    padding: 0px 15px 30px;
+.notFoundPage .container {
+  max-width: 1100px;
+  box-sizing: border-box;
+  padding: 0px 15px 30px;
 }
-.notFoundContent{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px;
+.notFoundContent {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
 }
-.notFoundContent img{
-    width: 100%;
-    max-width: 300px;
-    height: 300px;
-    padding: 5px;
+.notFoundContent img {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  padding: 5px;
 }
-.notFoundContent .content{
-    font-size: 1.3em;
-    line-height: 1.7em;
-    padding: 10px;
-    max-width: 700px;
+.notFoundContent .content {
+  font-size: 1.3em;
+  line-height: 1.7em;
+  padding: 10px;
+  max-width: 700px;
 }
-.notFoundContent .content .text{
-    color: #666;
+.notFoundContent .content .text {
+  color: #666;
 }
-.notFoundContent .content p{
-    margin: 7px 0;
+.notFoundContent .content p {
+  margin: 7px 0;
 }
-.notFoundContent .content .jokes{
-    padding-left: 20px;
-    margin-top: 10px;
-    font-style: italic;
+.notFoundContent .content .jokes {
+  padding-left: 20px;
+  margin-top: 10px;
+  font-style: italic;
 }
-.notFoundPage a{
-    color: #669ef9;
+.notFoundPage a {
+  color: #669ef9;
 }

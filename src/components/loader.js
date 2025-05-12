@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import './loader.css';
+import "./loader.css";
 
-const Loader = function(){
-    return (
-        <div className="loader-container">
-            <div className="loader"></div>
-        </div>
-    );
-}
+const Loader = function () {
+  return (
+    <div className="loader-container">
+      <div className="loader"></div>
+    </div>
+  );
+};
 
 export default Loader;

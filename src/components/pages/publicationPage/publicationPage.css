@@ -1,72 +1,72 @@
-.publicationPage{
-    background-color: #FFFFFF;
-    color: #3e3e3e;
-    border-radius: 0 0 5px 5px;
-    margin-top: 15px;
+.publicationPage {
+  background-color: #ffffff;
+  color: #3e3e3e;
+  border-radius: 0 0 5px 5px;
+  margin-top: 15px;
 }
-.publicationPage .pageHeader{
-    margin-bottom: 0px;
+.publicationPage .pageHeader {
+  margin-bottom: 0px;
 }
-.publicationPage .container{
-    margin-top: 20px;
-    padding-bottom: 20px;
-    max-width: 1100px;
+.publicationPage .container {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  max-width: 1100px;
 }
-.publicationPage h2{
-    margin: 15px 5px 5px;
+.publicationPage h2 {
+  margin: 15px 5px 5px;
 }
-.publicationPage .publications{
-    display: flex;
-    flex-wrap: wrap;
+.publicationPage .publications {
+  display: flex;
+  flex-wrap: wrap;
 }
-.publicationPage .publication{
-    width: 250px;
-    height: 350px;
-    margin: 5px;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: 90% 10%;
-    grid-template-columns: 100%;
-    box-shadow: 7px 7px 36px -9px rgba(0,0,0,0.2);
-    cursor: pointer;
-    transform: translateY(0px);
-    transition: all 200ms ease-in-out;
-    color: inherit;
-    text-decoration: inherit;
+.publicationPage .publication {
+  width: 250px;
+  height: 350px;
+  margin: 5px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 90% 10%;
+  grid-template-columns: 100%;
+  box-shadow: 7px 7px 36px -9px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transform: translateY(0px);
+  transition: all 200ms ease-in-out;
+  color: inherit;
+  text-decoration: inherit;
 }
-.publicationPage .publication:hover{
-    box-shadow: 10px 10px 36px -9px rgba(0,0,0,0.3);
-    transform: translateY(-2px);
+.publicationPage .publication:hover {
+  box-shadow: 10px 10px 36px -9px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }
-.publication .publication-cover{
-    height:100%;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    grid-row: 1 / span 2;
-    grid-column: 1;
+.publication .publication-cover {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  grid-row: 1 / span 2;
+  grid-column: 1;
 }
-.publication img{
-    height:100%;
-    width: 100%;
-    object-fit:contain;
-    object-position: center;
+.publication img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
 }
-.publication .description{
-    grid-row: 2 / span 1;
-    grid-column: 1;
-    z-index: 5;
-    background-color: #FFF;
+.publication .description {
+  grid-row: 2 / span 1;
+  grid-column: 1;
+  z-index: 5;
+  background-color: #fff;
 }
-.publication .description .publication-name{
-    margin-left: 10px;
-    margin-right: 5px;
-    margin-top: -10px;
+.publication .description .publication-name {
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-top: -10px;
 }
-.publication .description span{
-    font-size: 2em;
-    font-family: 'Baron Neue', sans-serif;
-    text-transform: lowercase;
-    line-height: 1.1em;
-    background-color: #9CFEDA;
+.publication .description span {
+  font-size: 2em;
+  font-family: "Baron Neue", sans-serif;
+  text-transform: lowercase;
+  line-height: 1.1em;
+  background-color: #9cfeda;
 }
