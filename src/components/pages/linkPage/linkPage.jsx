@@ -9,15 +9,15 @@ const Links = {
   cs: [
     {
       displayName: "CSE UG Intranet",
-      href: "https://www.cse.ust.hk/ug/hkust_only/",
+      href: "https://cse.hkust.edu.hk/ug/hkust_only/",
     },
     {
-      displayName: "Common Meeting Room Booking (ITSC VPN Required)",
-      href: "https://stubooking.cse.ust.hk/",
+      displayName: "ZINC",
+      href: "https://zinc.cse.ust.hk/",
     },
     {
       displayName: "CSE Course Assignment Submission System",
-      href: "https://course.cse.ust.hk/cass/submit.html",
+      href: "https://course.cse.ust.hk/cass/student/",
     },
     {
       displayName: "CS System",
@@ -27,19 +27,19 @@ const Links = {
   inside: [
     {
       displayName: "HKUST",
-      href: "https://www.ust.hk",
+      href: "https://www.hkust.edu.hk",
     },
     {
       displayName: "Department of Computer Science and Engineering",
-      href: "https://www.cse.ust.hk",
+      href: "https://cse.hkust.edu.hk/",
     },
     {
-      displayName: "myPortal",
-      href: "https://my.ust.hk/",
+      displayName: "HOTLINKS for STUDENT",
+      href: "https://itso.hkust.edu.hk/student-hotlinks/",
     },
     {
       displayName: "Canvas",
-      href: "http://canvas.ust.hk",
+      href: "https://canvas.ust.hk",
     },
     {
       displayName: "Path Advisor",
@@ -47,11 +47,11 @@ const Links = {
     },
     {
       displayName: "School of Engineering",
-      href: "https://www.seng.ust.hk/web/eng/",
+      href: "https://seng.hkust.edu.hk/",
     },
     {
       displayName: "The Computer Science and Engineering Alumni Association",
-      href: "https://www.cse.ust.hk/cseaa/main.html",
+      href: "https://cse.hkust.edu.hk/cseaa/main.html",
     },
   ],
   outside: [
@@ -60,16 +60,21 @@ const Links = {
       href: "http://www.hkcs.org.hk/",
     },
     {
-      displayName: "Society of Computer Studies, HKPUSU",
-      href: "http://web.su.polyu.edu.hk/~scs/",
+      displayName: "Computer Science Association, Engineering Society, HKU",
+      href: "https://www.instagram.com/hku.csa/",
     },
     {
-      displayName: "Computer Science Association, Engineering Society, HKUSU",
-      href: "https://i.cs.hku.hk/~csa/",
+      displayName: "The Computer Science Society, CUHK",
+      href: "https://appsrv.cse.cuhk.edu.hk/~cscs/index.php",
     },
     {
-      displayName: "BU Computer Association",
-      href: "https://net4.hkbu.edu.hk/~sa-compu/",
+      displayName: "Department of Computing Student Society, PolyU",
+      href: "https://www.instagram.com/polyu_31scs_serein/",
+    },
+
+    {
+      displayName: "Computer Science Society, HKBU",
+      href: "https://www.instagram.com/hkbu_css/",
     },
   ],
 };
