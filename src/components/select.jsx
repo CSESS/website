@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import "./select.css";
-import down from "../assets/down.svg"
+import down from "../assets/down.svg";
 class Select extends Component {
   static propTypes = {
     defaultValue: PropTypes.string.isRequired,

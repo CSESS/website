@@ -35,8 +35,8 @@ function ActivityPage(props) {
           setNotFound(false);
         }
       });
-      document.title = `${activity.event || "Activity"} | ${TITLE}`;
-  },[id, activity.event]);
+    document.title = `${activity.event || "Activity"} | ${TITLE}`;
+  }, [id, activity.event]);
   function onClickShare() {
     if (navigator.share) {
       let url = document.location.href;

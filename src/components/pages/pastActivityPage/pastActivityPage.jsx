@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import Loader from "../../loader";
 
 import "./pastActivityPage.css";
-import logo from "../../../assets/logo.svg"
+import logo from "../../../assets/logo.svg";
 function getRandomNumbers() {
   return Math.random() * 1000;
 }

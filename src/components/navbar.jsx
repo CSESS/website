@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
-import { NavLink, Link , useLocation} from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 
 import hamburger from "../assets/hambuger.svg";
 import clear from "../assets/clear.svg";
@@ -86,7 +86,7 @@ function NavBar() {
   const [isMobile, setIsMobile] = useState(false);
   const [tabActive, setTabActive] = useState(false);
   const [activeIndex, setActiveIndex] = useState("-1");
-  const location = useLocation()
+  const location = useLocation();
   function handleResize(event) {
     setTabActive(false);
     if (event.target.outerWidth < 650) {
@@ -103,10 +103,10 @@ function NavBar() {
     };
   }, []);
 
-  useEffect(()=>{
-    setTabActive(false)
-    setActiveIndex("-1")
-  },[location])
+  useEffect(() => {
+    setTabActive(false);
+    setActiveIndex("-1");
+  }, [location]);
 
   function renderNavItem() {
     return listItems.map((item, index) => {
@@ -176,6 +176,5 @@ function NavBar() {
     </div>
   );
 }
-
 
 export default NavBar;
