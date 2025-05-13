@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-
-import DocumentTitle from "react-document-title";
 import { TITLE } from "../../../const";
 
 import Table from "../../table";
-
 import "./shopDiscountPage.css";
 
 class shopDiscountPage extends Component {
@@ -26,7 +23,8 @@ class shopDiscountPage extends Component {
 
   render() {
     return (
-      <DocumentTitle title={`Shop Discount | ${TITLE}`}>
+      <div>
+        <title>{`Shop Discount | ${TITLE}`}</title>
         <div className="shopDiscount">
           <div className="container">
             <h1 className="pageHeader">Shop Discount</h1>
@@ -52,7 +50,7 @@ class shopDiscountPage extends Component {
             />
           </div>
         </div>
-      </DocumentTitle>
+      </div>
     );
   }
 }

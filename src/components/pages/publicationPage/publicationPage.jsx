@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import DocumentTitle from "react-document-title";
 import groupBy from "lodash/groupBy";
 import keys from "lodash/keys";
 import size from "lodash/size";
@@ -75,14 +74,15 @@ class publicationPage extends Component {
 
   render() {
     return (
-      <DocumentTitle title={`Publications | ${TITLE}`}>
+      <div>
+        <title>{`Publications | ${TITLE}`}</title>
         <div className="publicationPage">
           <div className="container">
             <h1 className="pageHeader">Publications</h1>
             {this.renderPublicationGroup()}
           </div>
         </div>
-      </DocumentTitle>
+      </div>
     );
   }
 }

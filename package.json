@@ -6,7 +6,6 @@
     "lodash": "^4.17.11",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
-    "react-document-title": "^2.0.3",
     "react-dom": "^19.0.0",
     "react-router-dom": "^6.0.0"
   },

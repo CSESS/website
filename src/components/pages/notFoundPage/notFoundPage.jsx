@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-
-import DocumentTitle from "react-document-title";
 import { TITLE } from "../../../const";
-
 import { Link } from "react-router-dom";
 
 import "./notFoundPage.css";
@@ -33,7 +30,8 @@ class notFoundPage extends Component {
 
   render() {
     return (
-      <DocumentTitle title={`Page Not Found | ${TITLE}`}>
+      <div>
+        <title>{`Page Not Found | ${TITLE}`}</title>
         <div className="notFoundPage">
           <div className="container">
             <h1 className="pageHeader">Page Not Found</h1>
@@ -54,7 +52,7 @@ class notFoundPage extends Component {
             </div>
           </div>
         </div>
-      </DocumentTitle>
+      </div>
     );
   }
 }

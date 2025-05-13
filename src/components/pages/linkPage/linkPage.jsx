@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-
-import DocumentTitle from "react-document-title";
 import { TITLE } from "../../../const";
 
 import "./linkPage.css";
@@ -97,7 +95,8 @@ class linkPage extends Component {
   }
   render() {
     return (
-      <DocumentTitle title={`Links | ${TITLE}`}>
+      <div>
+        <title>{`Links | ${TITLE}`}</title>
         <div className="linkPage">
           <div className="container">
             <h1 className="pageHeader">Links</h1>
@@ -115,7 +114,7 @@ class linkPage extends Component {
             </div>
           </div>
         </div>
-      </DocumentTitle>
+      </div>
     );
   }
 }

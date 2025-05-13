@@ -1,15 +1,10 @@
 import React, { Component } from "react";
-
-import DocumentTitle from "react-document-title";
-// import timeago from 'timeago.js';
 import { TITLE } from "../../../const";
-
 import { Link } from "react-router-dom";
-
 import Loader from "../../loader";
-
 import "../indexPage/indexPage.css";
 import "./currentActivitiesPage.css";
+
 function timeAgo(timestamp, locale = "en") {
   let value;
   const diff = (new Date().getTime() - new Date(timestamp).getTime()) / 1000;
@@ -110,14 +105,15 @@ class currentActivitiesPage extends Component {
 
   render() {
     return (
-      <DocumentTitle title={`Activities | ${TITLE}`}>
+      <div>
+        <title>{`Activities | ${TITLE}`}</title>
         <div className="currentActivitiesPage">
           <div className="container">
             <h1 className="pageHeader">Activities</h1>
             {this.renderActivites()}
           </div>
         </div>
-      </DocumentTitle>
+      </div>
     );
   }
 }

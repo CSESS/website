@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import DocumentTitle from "react-document-title";
 import { TITLE } from "../../../const";
 
 import Table from "../../table";
@@ -38,7 +37,8 @@ class sportPage extends Component {
 
   render() {
     return (
-      <DocumentTitle title={`Sports | ${TITLE}`}>
+      <div>
+        <title>{`Sports | ${TITLE}`}</title>
         <div className="sportPage">
           <div className="container">
             <h1 className="pageHeader">Sports</h1>
@@ -97,7 +97,7 @@ class sportPage extends Component {
             </div>
           </div>
         </div>
-      </DocumentTitle>
+      </div>
     );
   }
 }

@@ -1,9 +1,5 @@
 import React, { Component, Fragment } from "react";
-import DocumentTitle from "react-document-title";
 import { Link } from "react-router-dom";
-
-// import timeago from 'timeago.js';
-
 import { TITLE } from "../../../const";
 
 import "./indexPage.css";
@@ -182,7 +178,8 @@ class indexPage extends Component {
 
   render() {
     return (
-      <DocumentTitle title={`Home | ${TITLE}`}>
+      <div>
+        <title>{`Home | ${TITLE}`}</title>
         <div className="indexPage">
           <div className="container">
             {this.renderUpcoming()}
@@ -192,7 +189,7 @@ class indexPage extends Component {
             </div>
           </div>
         </div>
-      </DocumentTitle>
+      </div>
     );
   }
 }

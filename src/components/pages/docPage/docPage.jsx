@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-
-import DocumentTitle from "react-document-title";
 import { TITLE } from "../../../const";
-
 import Loader from "../../loader";
-
 import "./docPage.css";
 
 class docPage extends Component {
@@ -51,14 +47,15 @@ class docPage extends Component {
 
   render() {
     return (
-      <DocumentTitle title={`Documents | ${TITLE}`}>
+      <div>
+        <title>{`Documents | ${TITLE}`}</title>
         <div className="docPage">
           <div className="container">
             <h1 className="pageHeader">Documents</h1>
             <div className="docs">{this.renderDocs()}</div>
           </div>
         </div>
-      </DocumentTitle>
+      </div>
     );
   }
 }

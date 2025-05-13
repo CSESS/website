@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import DocumentTitle from "react-document-title";
 import { TITLE, SESSION } from "../../../const";
 
 import Loader from "../../loader";
@@ -99,7 +98,8 @@ class excoPage extends Component {
 
   render() {
     return (
-      <DocumentTitle title={`Excos | ${TITLE}`}>
+      <div >
+        <title>{`Excos | ${TITLE}`}</title>
         <div className="excoPage">
           <div className="container">
             <h1 className="pageHeader">Excos</h1>
@@ -112,7 +112,7 @@ class excoPage extends Component {
             {this.renderExcos()}
           </div>
         </div>
-      </DocumentTitle>
+      </div>
     );
   }
 }

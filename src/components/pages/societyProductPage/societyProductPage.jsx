@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-
-import DocumentTitle from "react-document-title";
 import { TITLE } from "../../../const";
 
 import Loader from "../../loader";
@@ -65,7 +63,8 @@ class societyProductPage extends Component {
 
   render() {
     return (
-      <DocumentTitle title={`Society Products | ${TITLE}`}>
+      <div>
+        <title>{`Society Products | ${TITLE}`}</title>
         <div className="societyProductPage">
           <div className="container">
             <h1 className="pageHeader">Society Products</h1>
@@ -74,7 +73,7 @@ class societyProductPage extends Component {
             </div>
           </div>
         </div>
-      </DocumentTitle>
+      </div>
     );
   }
 }

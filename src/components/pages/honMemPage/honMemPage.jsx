@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-
-import DocumentTitle from "react-document-title";
 import { TITLE } from "../../../const";
-
 import Table from "../../table";
-
 import "./honMemPage.css";
 
 class honMemPage extends Component {
@@ -26,7 +22,8 @@ class honMemPage extends Component {
 
   render() {
     return (
-      <DocumentTitle title={`Honorary Members | ${TITLE}`}>
+      <div>
+        <title>{`Honorary Members | ${TITLE}`}</title>
         <div className="honMemPage">
           <div className="container">
             <h1 className="pageHeader">Honorary Members</h1>
@@ -40,7 +37,7 @@ class honMemPage extends Component {
             />
           </div>
         </div>
-      </DocumentTitle>
+      </div>
     );
   }
 }

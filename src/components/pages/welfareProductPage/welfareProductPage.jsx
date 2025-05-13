@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import DocumentTitle from "react-document-title";
 import groupBy from "lodash/groupBy";
 import keys from "lodash/keys";
 import size from "lodash/size";
@@ -69,14 +68,15 @@ class welfareProductPage extends Component {
 
   render() {
     return (
-      <DocumentTitle title={`Welfare Products | ${TITLE}`}>
+      <div>
+        <title>{`Welfare Products | ${TITLE}`}</title>
         <div className="welfareProducts">
           <div className="container">
             <h1 className="pageHeader">Welfare Products</h1>
             <div className="products">{this.renderProductGroup()}</div>
           </div>
         </div>
-      </DocumentTitle>
+      </div>
     );
   }
 }

@@ -1,15 +1,12 @@
 import React, { Component } from "react";
-
-import DocumentTitle from "react-document-title";
-// import timeago from 'timeago.js';
 import { TITLE } from "../../../const";
-
 import { Link } from "react-router-dom";
 
 import Loader from "../../loader";
 
 import "./pastActivityPage.css";
 import logo from "../../../assets/logo.svg";
+
 function getRandomNumbers() {
   return Math.random() * 1000;
 }
@@ -58,7 +55,8 @@ class pastActivityPage extends Component {
 
   setDefaultSrc(event) {
     event.target.src = logo;
-    event.target.parentNode.children[0].srcset = event.target.parentNode.children[1].srcset = logo;
+    event.target.parentNode.children[0].srcset =
+      event.target.parentNode.children[1].srcset = logo;
   }
 
   renderActivites() {
@@ -116,7 +114,8 @@ class pastActivityPage extends Component {
 
   render() {
     return (
-      <DocumentTitle title={`Past Activities | ${TITLE}`}>
+      <div>
+        <title>{`Past Activities | ${TITLE}`}</title>
         <div className="pastActivityPage">
           <div className="container">
             <h1 className="pageHeader">Past Activities</h1>
@@ -134,7 +133,7 @@ class pastActivityPage extends Component {
               )}
           </div>
         </div>
-      </DocumentTitle>
+      </div>
     );
   }
 }
