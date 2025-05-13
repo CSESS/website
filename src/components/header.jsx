@@ -1,12 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
 import "./header.css";
 
+import fb from "../assets/fb-white.svg";
+import ig from "../assets/ig-white.svg";
+import yt from "../assets/yt-white.svg";
+import medium from "../assets/medium-white.svg";
 import Logo from "../assets/logo.svg";
 import cons from "../assets/website_cons.svg";
 import csess from "../assets/website_csess.svg";
-import { useLocation } from "react-router-dom";
 
 function Header() {
   let isHome = useLocation().pathname === "/";
@@ -21,28 +23,28 @@ function Header() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={require("../assets/fb-white.svg")} alt="Facebook" />
+          <img src={fb} alt="Facebook" />
         </a>
         <a
           href="https://www.instagram.com/csess.hkustsu/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={require("../assets/ig-white.svg")} alt="Instagram" />
+          <img src={ig} alt="Instagram" />
         </a>
         <a
           href="https://www.youtube.com/@CSESSHKUSTSU"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={require("../assets/yt-white.svg")} alt="Youtube" />
+          <img src={yt} alt="Youtube" />
         </a>
         <a
           href="https://ustcsess.medium.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={require("../assets/medium-white.svg")} alt="Medium" />
+          <img src={medium} alt="Medium" />
         </a>
       </div>
       <div className="csess" aria-selected="false">

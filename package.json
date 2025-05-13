@@ -5,16 +5,16 @@
   "dependencies": {
     "lodash": "^4.17.11",
     "prop-types": "^15.8.1",
-    "react": "^16.2.0",
+    "react": "^19.0.0",
     "react-document-title": "^2.0.3",
-    "react-dom": "^16.12.0",
+    "react-dom": "^19.0.0",
     "react-helmet": "^5.2.1",
-    "react-router-dom": "^6.0.0",
-    "react-scripts": "^3.0.0"
+    "react-router-dom": "^6.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
@@ -60,7 +60,9 @@
     "extends": "react-app"
   },
   "devDependencies": {
-    "prettier": "3.5.3"
+    "@vitejs/plugin-react": "^4.4.1",
+    "prettier": "3.5.3",
+    "vite": "^6.3.5"
   },
   "browserslist": {
     "production": [
