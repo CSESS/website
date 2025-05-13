@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 
 import { Navigate } from "react-router-dom";
-import { Helmet } from "react-helmet";
 
 import { TITLE } from "../../../const";
 
@@ -50,25 +49,24 @@ function ActivityPage(props) {
     if (activity.aid) {
       return (
         <div>
-          <Helmet>
-            <meta
-              name="Description"
-              content={activity.description
-                .replace(/<[^>]*>?/gm, "")
-                .substring(0, 150)}
-            />
-            <meta
-              property="og:title"
-              content={`${activity.event || "Activity"} | ${TITLE}`}
-            />
-            <meta property="og:image" content={activity.thumb} />
-            <meta
-              property="og:description"
-              content={activity.description
-                .replace(/<[^>]*>?/gm, "")
-                .substring(0, 150)}
-            />
-          </Helmet>
+          <meta
+            name="Description"
+            content={activity.description
+              .replace(/<[^>]*>?/gm, "")
+              .substring(0, 150)}
+          />
+          <meta
+            property="og:title"
+            content={`${activity.event || "Activity"} | ${TITLE}`}
+          />
+          <meta property="og:image" content={activity.thumb} />
+          <meta
+            property="og:description"
+            content={activity.description
+              .replace(/<[^>]*>?/gm, "")
+              .substring(0, 150)}
+          />
+
           <div className="act-page-grid">
             <div className="header-side">
               <h1 className="pageHeader">Activity</h1>
@@ -128,22 +126,22 @@ function ActivityPage(props) {
             )}
             {activity.hasThumb && (
               <picture>
-              <source
-                srcSet={
-                  "https://img.csess.workers.dev/transform/h_500,w_500,to_avif/" +
-                  act.thumb
-                }
-                type="image/avif"
-              />
-              <source
-                srcSet={
-                  "https://img.csess.workers.dev/transform/h_500,w_500,to_webp/" +
-                  act.thumb
-                }
-                type="image/webp"
-              />
-              <img src={act.thumb} alt={act.event} />
-            </picture>
+                <source
+                  srcSet={
+                    "https://img.csess.workers.dev/transform/h_500,w_500,to_avif/" +
+                    activity.thumb
+                  }
+                  type="image/avif"
+                />
+                <source
+                  srcSet={
+                    "https://img.csess.workers.dev/transform/h_500,w_500,to_webp/" +
+                    activity.thumb
+                  }
+                  type="image/webp"
+                />
+                <img src={activity.thumb} alt={activity.event} />
+              </picture>
             )}
           </div>
         </div>
