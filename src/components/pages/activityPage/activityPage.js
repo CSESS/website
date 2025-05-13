@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
 
-import DocumentTitle from "react-document-title";
 import { Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
@@ -21,7 +20,6 @@ function ActivityPage(props) {
   const id = useParams().id;
 
   useEffect(() => {
-    document.title = `${activity.event || "Activity"} | ${TITLE}`;
     if (navigator.share) {
       setCouldShare(true);
     }
@@ -37,7 +35,8 @@ function ActivityPage(props) {
           setNotFound(false);
         }
       });
-  }, []);
+      document.title = `${activity.event || "Activity"} | ${TITLE}`;
+  },[id, activity.event]);
   function onClickShare() {
     if (navigator.share) {
       let url = document.location.href;
