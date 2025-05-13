@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import "./select.css";
-
+import down from "../assets/down.svg"
 class Select extends Component {
   static propTypes = {
     defaultValue: PropTypes.string.isRequired,
@@ -54,7 +54,7 @@ class Select extends Component {
       <div className={`select ${this.state.isOpen ? "active" : ""}`}>
         <button className="select-btn" onClick={this.toggleSelect.bind(this)}>
           <span>{this.state.selected}</span>
-          <img src={require("../assets/down.svg")} alt="V" />
+          <img src={down} alt="V" />
         </button>
         <div className="select-options">{this.renderOptions()}</div>
       </div>

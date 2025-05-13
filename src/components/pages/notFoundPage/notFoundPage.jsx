@@ -6,6 +6,7 @@ import { TITLE } from "../../../const";
 import { Link } from "react-router-dom";
 
 import "./notFoundPage.css";
+import lg2 from "../../../assets/lg2.png";
 
 const jokes = [
   "I would tell you a joke about UDP, but you would never get it.",
@@ -37,7 +38,7 @@ class notFoundPage extends Component {
           <div className="container">
             <h1 className="pageHeader">Page Not Found</h1>
             <div className="notFoundContent">
-              <img src={require("../../../assets/lg2.png")} alt="lg2" />
+              <img src={lg2} alt="lg2" />
               <div className="content">
                 <div className="text">
                   <p>

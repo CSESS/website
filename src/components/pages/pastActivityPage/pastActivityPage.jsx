@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import Loader from "../../loader";
 
 import "./pastActivityPage.css";
-
+import logo from "../../../assets/logo.svg"
 function getRandomNumbers() {
   return Math.random() * 1000;
 }
@@ -57,7 +57,7 @@ class pastActivityPage extends Component {
   }
 
   setDefaultSrc(event) {
-    event.target.src = require("../../../assets/logo.svg");
+    event.target.src = logo;
   }
 
   renderActivites() {

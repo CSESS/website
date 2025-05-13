@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 import { TITLE } from "../../../const";
 
 import "./aboutPage.css";
+import fb from "../../../assets/fb.svg";
+import ig from "../../../assets/ig.svg";
+import yt from "../../../assets/yt.svg";
+import medium from "../../../assets/medium.svg";
 
 export default function (props) {
   useEffect(() => {
@@ -71,28 +75,28 @@ export default function (props) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={require("../../../assets/fb.svg")} alt="Facebook" />
+                <img src={fb} alt="Facebook" />
               </a>
               <a
                 href="https://www.instagram.com/csess.hkustsu/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={require("../../../assets/ig.svg")} alt="Instagram" />
+                <img src={ig} alt="Instagram" />
               </a>
               <a
                 href="https://www.youtube.com/@CSESSHKUSTSU"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={require("../../../assets/yt.svg")} alt="Youtube" />
+                <img src={yt} alt="Youtube" />
               </a>
               <a
                 href="https://ustcsess.medium.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={require("../../../assets/medium.svg")} alt="Medium" />
+                <img src={medium} alt="Medium" />
               </a>
             </div>
           </div>
