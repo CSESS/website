@@ -103,15 +103,15 @@ class indexPage extends Component {
           <div className="thumb">
             <picture>
               <source
-                srcset={
-                  "https://img-cf.jywtom.me/img/h_250,w_250,to_avif/" +
+                srcSet={
+                  "https://img.csess.workers.dev/transform/h_250,w_250,to_avif/" +
                   act.thumb
                 }
                 type="image/avif"
               />
               <source
-                srcset={
-                  "https://img-cf.jywtom.me/img/h_250,w_250,to_webp/" +
+                srcSet={
+                  "https://img.csess.workers.dev/transform/h_250,w_250,to_webp/" +
                   act.thumb
                 }
                 type="image/webp"
