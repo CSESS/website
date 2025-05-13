@@ -1,9 +1,8 @@
-import React, { Component, Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 
 import DocumentTitle from "react-document-title";
 import { Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { size } from "lodash";
 
 import { TITLE } from "../../../const";
 
@@ -13,52 +12,43 @@ import ShareIcon from "../../../assets/share.svg";
 import CalendarIcon from "../../../assets/calendar.svg";
 
 import "./activityPage.css";
+import { useParams } from "react-router-dom";
 
-class activityPage extends Component {
-  constructor(props) {
-    super(props);
+function ActivityPage(props) {
+  const [activity, setActivity] = useState({});
+  const [notFound, setNotFound] = useState(false);
+  const [couldShare, setCouldShare] = useState(false);
+  const id = useParams().id;
 
-    this.state = {
-      activity: {},
-      notFound: false,
-      couldShare: false,
-    };
-  }
-
-  componentDidMount() {
+  useEffect(() => {
+    document.title = `${activity.event || "Activity"} | ${TITLE}`;
     if (navigator.share) {
-      this.setState({ couldShare: true });
+      setCouldShare(true);
     }
-
-    const id = this.props.match.params.id;
     fetch(`https://csess.su.hkust.edu.hk/api/activity.php?id=${id}`)
       .then((response) => {
         return response.json();
       })
       .then((data) => {
         if (data.error) {
-          this.setState({ notFound: true });
+          setNotFound(true);
         } else {
-          this.setState({ activity: data, notFound: false });
+          setActivity(data);
+          setNotFound(false);
         }
       });
-  }
-
-  onClickShare() {
-    const { activity } = this.state;
+  }, []);
+  function onClickShare() {
     if (navigator.share) {
       let url = document.location.href;
       navigator.share({ title: activity.event, url: url });
     }
   }
-
-  renderData() {
-    const id = this.props.match.params.id;
-    const { activity, notFound, couldShare } = this.state;
+  function renderData() {
     if (notFound) {
       return <Navigate to="/404/" />;
     }
-    if (size(activity) > 0) {
+    if (activity.aid) {
       return (
         <div>
           <Helmet>
@@ -70,7 +60,7 @@ class activityPage extends Component {
             />
             <meta
               property="og:title"
-              content={`${activity.event ? activity.event : "Activity"} | ${TITLE}`}
+              content={`${activity.event || "Activity"} | ${TITLE}`}
             />
             <meta property="og:image" content={activity.thumb} />
             <meta
@@ -103,10 +93,7 @@ class activityPage extends Component {
             </div>
             <div className="control-side">
               {couldShare && (
-                <div
-                  className="control-item"
-                  onClick={this.onClickShare.bind(this)}
-                >
+                <div className="control-item" onClick={onClickShare}>
                   <img src={ShareIcon} alt="Share" />
                 </div>
               )}
@@ -155,17 +142,11 @@ class activityPage extends Component {
     }
   }
 
-  render() {
-    return (
-      <DocumentTitle
-        title={`${this.state.activity.event ? this.state.activity.event : "Activity"} | ${TITLE}`}
-      >
-        <div className="activityPage">
-          <div className="container">{this.renderData()}</div>
-        </div>
-      </DocumentTitle>
-    );
-  }
+  return (
+    <div className="activityPage">
+      <div className="container">{renderData()}</div>
+    </div>
+  );
 }
 
-export default activityPage;
+export default ActivityPage;
