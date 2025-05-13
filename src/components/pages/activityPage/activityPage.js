@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 
 import DocumentTitle from "react-document-title";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { size } from "lodash";
 
@@ -56,7 +56,7 @@ class activityPage extends Component {
     const id = this.props.match.params.id;
     const { activity, notFound, couldShare } = this.state;
     if (notFound) {
-      return <Redirect to="/404/" />;
+      return <Navigate to="/404/" />;
     }
     if (size(activity) > 0) {
       return (

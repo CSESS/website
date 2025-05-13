@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import DocumentTitle from "react-document-title";
-import { withRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // import timeago from 'timeago.js';
 
@@ -181,4 +181,4 @@ class indexPage extends Component {
   }
 }
 
-export default withRouter(indexPage);
+export default indexPage;
