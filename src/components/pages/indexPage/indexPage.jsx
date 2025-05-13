@@ -104,14 +104,14 @@ class indexPage extends Component {
             <picture>
               <source
                 srcSet={
-                  "https://img.csess.workers.dev/transform/h_250,w_250,to_avif/" +
+                  "https://img.csess.workers.dev/transform/h_500,w_500,to_avif/" +
                   act.thumb
                 }
                 type="image/avif"
               />
               <source
                 srcSet={
-                  "https://img.csess.workers.dev/transform/h_250,w_250,to_webp/" +
+                  "https://img.csess.workers.dev/transform/h_500,w_500,to_webp/" +
                   act.thumb
                 }
                 type="image/webp"
