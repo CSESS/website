@@ -127,11 +127,23 @@ function ActivityPage(props) {
               </Fragment>
             )}
             {activity.hasThumb && (
-              <img
-                className="thumb"
-                src={activity.thumb}
-                alt={activity.event}
+              <picture>
+              <source
+                srcSet={
+                  "https://img.csess.workers.dev/transform/h_500,w_500,to_avif/" +
+                  act.thumb
+                }
+                type="image/avif"
               />
+              <source
+                srcSet={
+                  "https://img.csess.workers.dev/transform/h_500,w_500,to_webp/" +
+                  act.thumb
+                }
+                type="image/webp"
+              />
+              <img src={act.thumb} alt={act.event} />
+            </picture>
             )}
           </div>
         </div>

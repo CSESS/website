@@ -58,6 +58,7 @@ class pastActivityPage extends Component {
 
   setDefaultSrc(event) {
     event.target.src = logo;
+    event.target.parentNode.children[0].srcset = event.target.parentNode.children[1].srcset = logo;
   }
 
   renderActivites() {
@@ -77,11 +78,27 @@ class pastActivityPage extends Component {
             className={`past-activity ${random < 50 ? "big" : ""} ${random > 800 ? "middle" : ""}`}
           >
             <div className="act-image">
-              <img
-                onError={this.setDefaultSrc}
-                src={activity.thumb}
-                alt={activity.event}
-              />
+              <picture>
+                <source
+                  srcSet={
+                    "https://img.csess.workers.dev/transform/h_500,w_500,to_avif/" +
+                    activity.thumb
+                  }
+                  type="image/avif"
+                />
+                <source
+                  srcSet={
+                    "https://img.csess.workers.dev/transform/h_500,w_500,to_webp/" +
+                    activity.thumb
+                  }
+                  type="image/webp"
+                />
+                <img
+                  onError={this.setDefaultSrc}
+                  src={activity.thumb}
+                  alt={activity.event}
+                />
+              </picture>
             </div>
             <div className="act-detail">
               <div className="act-name">
