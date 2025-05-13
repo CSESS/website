@@ -45,14 +45,14 @@ class excoPage extends Component {
                 <picture>
                   <source
                     srcset={
-                      "https://img.csess.workers.dev/transform/h_210,w_210,to_avif/" +
+                      "https://img.csess.workers.dev/transform/h_500,w_500,to_avif/" +
                       `https://csess.su.hkust.edu.hk/home/images/exco/${exco.session}/${exco.nickname}.jpg`
                     }
                     type="image/avif"
                   />
                   <source
                     srcset={
-                      "https://img.csess.workers.dev/transform/h_210,w_210,to_webp/" +
+                      "https://img.csess.workers.dev/transform/h_500,w_500,to_webp/" +
                       `https://csess.su.hkust.edu.hk/home/images/exco/${exco.session}/${exco.nickname}.jpg`
                     }
                     type="image/webp"
