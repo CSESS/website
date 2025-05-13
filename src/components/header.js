@@ -10,7 +10,6 @@ import { useLocation } from "react-router-dom";
 
 function Header() {
   let isHome = useLocation().pathname === "/";
-  console.log(isHome);
   return (
     <div className={`box-header ${isHome ? "tall" : ""}`}>
       <Link to="/" className="logo">
