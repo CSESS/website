@@ -33,7 +33,7 @@ class honMemPage extends Component {
                 { id: "position", display: "Position" },
                 { id: "name", display: "Name" },
               ]}
-              datas={this.state.honMemList}
+              data={this.state.honMemList}
             />
           </div>
         </div>

@@ -5,16 +5,20 @@ import "./table.css";
 
 import Loader from "./loader";
 
-class Table extends Component {
-  static propTypes = {
-    keys: PropTypes.array.isRequired,
-    datas: PropTypes.array.isRequired,
-  };
 
-  displayKeys() {
+interface Props {
+  keys: {
+    id: string;
+    display: string;
+  }[]
+  data: []
+}
+
+function Table(props: Props) {
+  function displayKeys() {
     return (
       <div className="table-header table-row">
-        {this.props.keys.map((key) => {
+        {props.keys.map((key) => {
           return (
             <div className="table-header-item table-item" key={key.id}>
               {key.display}
@@ -24,15 +28,14 @@ class Table extends Component {
       </div>
     );
   }
-
-  displayItems() {
-    return this.props.datas.map((row, index) => {
+  function displayItems() {
+    return props.data.map((row, index) => {
       return (
         <div
           key={"key" + index}
           className={`table-row ${index % 2 === 0 ? "table-row-even" : ""}`}
         >
-          {this.props.keys.map((key) => {
+          {props.keys.map((key) => {
             return (
               <div className="table-item" key={key.id + row[key.id]}>
                 {row[key.id]}
@@ -44,18 +47,18 @@ class Table extends Component {
     });
   }
 
-  render() {
-    if (this.props.datas && this.props.datas.length > 0) {
-      return (
-        <div className="table">
-          {this.displayKeys()}
-          {this.displayItems()}
-        </div>
-      );
-    } else {
-      return <Loader />;
-    }
+  if (props.data && props.data.length > 0) {
+    return (
+      <div className="table">
+        {displayKeys()}
+        {displayItems()}
+      </div>
+    );
+  } else {
+    return <Loader />;
   }
 }
+
+
 
 export default Table;
