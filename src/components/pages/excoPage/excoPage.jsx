@@ -98,7 +98,7 @@ class excoPage extends Component {
 
   render() {
     return (
-      <div >
+      <div>
         <title>{`Excos | ${TITLE}`}</title>
         <div className="excoPage">
           <div className="container">

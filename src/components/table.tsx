@@ -1,17 +1,14 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-
-import "./table.css";
-
 import Loader from "./loader";
 
+import "./table.css";
 
 interface Props {
   keys: {
     id: string;
     display: string;
-  }[]
-  data: []
+  }[];
+  data: [];
 }
 
 function Table(props: Props) {
@@ -58,7 +55,5 @@ function Table(props: Props) {
     return <Loader />;
   }
 }
-
-
 
 export default Table;

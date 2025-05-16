@@ -4,17 +4,17 @@ import down from "../assets/down.svg";
 import { useState, SyntheticEvent } from "react";
 
 interface Props {
-  defaultValue: String
-  options: []
-  onSelect: (e: SyntheticEvent<HTMLDivElement>) => {}
+  defaultValue: String;
+  options: [];
+  onSelect: (e: SyntheticEvent<HTMLDivElement>) => {};
 }
 function Select(props: Props) {
-  const [isOpen, setIsOpen] = useState(false)
-  const [selected, setSelected] = useState(props.defaultValue)
+  const [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState(props.defaultValue);
   function handleOptionSelect(selected) {
-    setSelected(selected)
-    setIsOpen(false)
-    props.onSelect(selected)
+    setSelected(selected);
+    setIsOpen(false);
+    props.onSelect(selected);
   }
   function renderOptions() {
     const options = props.options;
@@ -38,8 +38,7 @@ function Select(props: Props) {
   }
 
   function toggleSelect() {
-    setIsOpen(!isOpen)
-
+    setIsOpen(!isOpen);
   }
   return (
     <div className={`select ${isOpen ? "active" : ""}`}>
@@ -51,6 +50,5 @@ function Select(props: Props) {
     </div>
   );
 }
-
 
 export default Select;
