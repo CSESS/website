@@ -43,14 +43,14 @@ class excoPage extends Component {
               <div className="exco" key={exco.sequence}>
                 <picture>
                   <source
-                    srcset={
+                    srcSet={
                       "https://img.csess.workers.dev/transform/h_500,w_500,to_avif/" +
                       `https://csess.su.hkust.edu.hk/home/images/exco/${exco.session}/${exco.nickname}.jpg`
                     }
                     type="image/avif"
                   />
                   <source
-                    srcset={
+                    srcSet={
                       "https://img.csess.workers.dev/transform/h_500,w_500,to_webp/" +
                       `https://csess.su.hkust.edu.hk/home/images/exco/${exco.session}/${exco.nickname}.jpg`
                     }

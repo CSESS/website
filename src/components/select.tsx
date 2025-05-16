@@ -1,17 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import "./select.css";
 import down from "../assets/down.svg";
-import { useState, SyntheticEvent } from "react";
+import { useState } from "react";
 
 interface Props {
   defaultValue: String;
-  options: [];
-  onSelect: (e: SyntheticEvent<HTMLDivElement>) => {};
+  options: String[];
+  onSelect: (e: String) => {};
 }
 function Select(props: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(props.defaultValue);
-  function handleOptionSelect(selected) {
+  function handleOptionSelect(selected: String) {
     setSelected(selected);
     setIsOpen(false);
     props.onSelect(selected);
@@ -19,11 +19,11 @@ function Select(props: Props) {
   function renderOptions() {
     const options = props.options;
     if (options && options.length > 0) {
-      return options.map((option) => {
+      return options.map((option, index) => {
         return (
           <button
             className="select-option"
-            key={option}
+            key={index}
             onClick={(_) => {
               handleOptionSelect(option);
             }}
