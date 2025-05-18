@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-
-import groupBy from "lodash/groupBy";
-import keys from "lodash/keys";
-import size from "lodash/size";
-
 import { TITLE } from "../../../const";
-
 import Loader from "../../loader";
 
 import "./publicationPage.css";
@@ -25,7 +19,7 @@ class publicationPage extends Component {
         return response.json();
       })
       .then((data) => {
-        let pup = groupBy(data, "session");
+        let pup = Object.groupBy(data, ({ session }) => session);
         this.setState({ publications: pup });
       });
   }
@@ -56,8 +50,8 @@ class publicationPage extends Component {
 
   renderPublicationGroup() {
     const publications = this.state.publications;
-    if (publications && size(publications) > 0) {
-      return keys(publications).map((session) => {
+    if (publications && Object.keys(publications).length > 0) {
+      return Object.keys(publications).map((session) => {
         return (
           <div key={session}>
             <h2>Session {session}</h2>

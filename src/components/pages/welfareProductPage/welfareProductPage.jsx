@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-
-import groupBy from "lodash/groupBy";
-import keys from "lodash/keys";
-import size from "lodash/size";
-
 import { TITLE } from "../../../const";
-
 import Loader from "../../loader";
 
 import "./welfareProductPage.css";
@@ -25,7 +19,7 @@ class welfareProductPage extends Component {
         return response.json();
       })
       .then((data) => {
-        let prod = groupBy(data, "session");
+        let prod = Object.groupBy(data, ({ session }) => session);
         this.setState({ products: prod });
       });
   }
@@ -50,8 +44,8 @@ class welfareProductPage extends Component {
 
   renderProductGroup() {
     const products = this.state.products;
-    if (products && size(products) > 0) {
-      return keys(products).map((session) => {
+    if (products && Object.keys(products).length > 0) {
+      return Object.keys(products).map((session) => {
         return (
           <div key={session}>
             <h2>Session {session}</h2>

@@ -14,9 +14,6 @@ importers:
       '@types/react-dom':
         specifier: ^19.1.5
         version: 19.1.5(@types/react@19.1.4)
-      lodash:
-        specifier: ^4.17.11
-        version: 4.17.21
       react:
         specifier: ^19.0.0
         version: 19.1.0
