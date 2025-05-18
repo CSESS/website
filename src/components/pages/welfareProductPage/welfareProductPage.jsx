@@ -30,7 +30,7 @@ class welfareProductPage extends Component {
       return (
         <div className="welfare-product" key={product.id}>
           <div className="product-image">
-            <img src={product.image} alt={product.name} loading="lazy"/>
+            <img src={product.image} alt={product.name} loading="lazy" />
           </div>
           <div className="description">
             <div className="product-name">

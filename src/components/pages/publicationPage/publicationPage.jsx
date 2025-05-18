@@ -36,7 +36,11 @@ class publicationPage extends Component {
           key={publication.id}
         >
           <div className="publication-cover">
-            <img src={publication.cover} alt={publication.title} loading="lazy"/>
+            <img
+              src={publication.cover}
+              alt={publication.title}
+              loading="lazy"
+            />
           </div>
           <div className="description">
             <div className="publication-name">

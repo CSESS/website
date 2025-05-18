@@ -5,6 +5,13 @@ import { TITLE } from "../../../const";
 import "./indexPage.css";
 
 import HomeLoader from "./homeLoader";
+function addSrc(src) {
+  return function (img) {
+    if (img) {
+      img.src = src;
+    }
+  };
+}
 function timeAgo(timestamp, locale = "en") {
   let value;
   const diff = (new Date().getTime() - new Date(timestamp).getTime()) / 1000;
@@ -112,7 +119,7 @@ class indexPage extends Component {
                 }
                 type="image/webp"
               />
-              <img src={act.thumb} alt={act.event} loading="lazy"/>
+              <img ref={addSrc(act.thumb)} alt={act.event} loading="lazy" />
             </picture>
           </div>
         </Link>
@@ -138,7 +145,6 @@ class indexPage extends Component {
           </div>
           <div className="thumb">
             <picture>
-              <img src={act.thumb} alt={act.event} loading="lazy"/>
               <source
                 srcSet={
                   "https://assets.csess.workers.dev/images/h_500,w_500,to_avif/" +
@@ -153,6 +159,7 @@ class indexPage extends Component {
                 }
                 type="image/webp"
               />
+              <img ref={addSrc(act.thumb)} alt={act.event} loading="lazy" />
             </picture>
           </div>
         </Link>

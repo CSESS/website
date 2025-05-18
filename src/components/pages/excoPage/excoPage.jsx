@@ -6,7 +6,13 @@ import Loader from "../../loader";
 import Select from "../../select";
 
 import "./excoPage.css";
-
+function addSrc(src) {
+  return function (img) {
+    if (img) {
+      img.src = src;
+    }
+  };
+}
 class excoPage extends Component {
   constructor(props) {
     super(props);
@@ -58,8 +64,10 @@ class excoPage extends Component {
                   />
                   <img
                     className="exco-img"
-                    src={`https://csess.su.hkust.edu.hk/home/images/exco/${exco.session}/${exco.nickname}.jpg`}
                     alt={exco.name}
+                    ref={addSrc(
+                      `https://csess.su.hkust.edu.hk/home/images/exco/${exco.session}/${exco.nickname}.jpg`,
+                    )}
                   />
                 </picture>
 

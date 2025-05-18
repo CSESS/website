@@ -11,7 +11,13 @@ import CalendarIcon from "../../../assets/calendar.svg";
 
 import "./activityPage.css";
 import { useParams } from "react-router-dom";
-
+function addSrc(src) {
+  return function (img) {
+    if (img) {
+      img.src = src;
+    }
+  };
+}
 function ActivityPage(props) {
   const [activity, setActivity] = useState({});
   const [notFound, setNotFound] = useState(false);
@@ -141,7 +147,7 @@ function ActivityPage(props) {
                   type="image/webp"
                 />
                 <img
-                  src={activity.thumb}
+                  ref={addSrc(activity.thumb)}
                   alt={activity.event}
                   className="thumb"
                   loading="lazy"

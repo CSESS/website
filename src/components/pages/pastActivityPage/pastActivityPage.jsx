@@ -6,7 +6,13 @@ import Loader from "../../loader";
 
 import "./pastActivityPage.css";
 import logo from "../../../assets/logo.svg";
-
+function addSrc(src) {
+  return function (img) {
+    if (img) {
+      img.src = src;
+    }
+  };
+}
 function getRandomNumbers() {
   return Math.random() * 1000;
 }
@@ -93,7 +99,7 @@ class pastActivityPage extends Component {
                 />
                 <img
                   onError={this.setDefaultSrc}
-                  src={activity.thumb}
+                  ref={addSrc(activity.thumb)}
                   alt={activity.event}
                   loading="lazy"
                 />

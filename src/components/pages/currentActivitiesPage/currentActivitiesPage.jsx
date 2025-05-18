@@ -4,7 +4,13 @@ import { Link } from "react-router-dom";
 import Loader from "../../loader";
 import "../indexPage/indexPage.css";
 import "./currentActivitiesPage.css";
-
+function addSrc(src) {
+  return function (img) {
+    if (img) {
+      img.src = src;
+    }
+  };
+}
 function timeAgo(timestamp, locale = "en") {
   let value;
   const diff = (new Date().getTime() - new Date(timestamp).getTime()) / 1000;
@@ -90,8 +96,12 @@ class currentActivitiesPage extends Component {
                       }
                       type="image/webp"
                     />
-                    <img src={act.thumb} alt={act.event} loading="lazy"/>                  
-                    </picture>
+                    <img
+                      alt={act.event}
+                      ref={addSrc(act.thumb)}
+                      loading="lazy"
+                    />
+                  </picture>
                 </div>
               </Link>
             );

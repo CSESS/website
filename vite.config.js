@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import legacy from '@vitejs/plugin-legacy';
+import legacy from "@vitejs/plugin-legacy";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig(() => {
@@ -12,12 +12,12 @@ export default defineConfig(() => {
     plugins: [
       legacy({
         modernPolyfills: ["es.object.group-by"],
-        renderLegacyChunks: false
+        renderLegacyChunks: false,
       }),
       react(),
       VitePWA({
         workbox: {
-          navigateFallbackDenylist: [/^\/home/],
+          navigateFallbackDenylist: [/^\/home/, /^\/api/],
         },
       }),
     ],
