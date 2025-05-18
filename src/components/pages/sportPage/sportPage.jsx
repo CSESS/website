@@ -92,7 +92,7 @@ class sportPage extends Component {
                   { id: "nickName", display: "Nick Name" },
                   { id: "sex", display: "Sex" },
                 ]}
-                datas={this.state.memberList}
+                data={this.state.memberList}
               />
             </div>
           </div>

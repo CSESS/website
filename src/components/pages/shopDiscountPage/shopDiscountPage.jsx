@@ -46,7 +46,7 @@ class shopDiscountPage extends Component {
                 { id: "address", display: "Address" },
                 { id: "discount", display: "Discount" },
               ]}
-              datas={this.state.shopList}
+              data={this.state.shopList}
             />
           </div>
         </div>
