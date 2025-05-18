@@ -58,7 +58,9 @@
     "extends": "react-app"
   },
   "devDependencies": {
+    "@vitejs/plugin-legacy": "^6.1.1",
     "@vitejs/plugin-react": "^4.4.1",
+    "core-js": "^3.42.0",
     "prettier": "3.5.3",
     "vite": "^6.3.5",
     "vite-plugin-pwa": "^1.0.0"
