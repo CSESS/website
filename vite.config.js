@@ -8,6 +8,13 @@ export default defineConfig(() => {
       outDir: "build",
     },
     base: "/",
-    plugins: [react(), VitePWA()],
+    plugins: [
+      react(),
+      VitePWA({
+        workbox: {
+          navigateFallbackDenylist: [/^\/home/],
+        },
+      }),
+    ],
   };
 });

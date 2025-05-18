@@ -100,14 +100,14 @@ class indexPage extends Component {
             <picture>
               <source
                 srcSet={
-                  "https://img.csess.workers.dev/transform/h_500,w_500,to_avif/" +
+                  "https://assets.csess.workers.dev/images/h_500,w_500,to_avif/" +
                   act.thumb
                 }
                 type="image/avif"
               />
               <source
                 srcSet={
-                  "https://img.csess.workers.dev/transform/h_500,w_500,to_webp/" +
+                  "https://assets.csess.workers.dev/images/h_500,w_500,to_webp/" +
                   act.thumb
                 }
                 type="image/webp"
@@ -140,14 +140,14 @@ class indexPage extends Component {
             <picture>
               <source
                 srcSet={
-                  "https://img.csess.workers.dev/transform/h_500,w_500,to_avif/" +
+                  "https://assets.csess.workers.dev/images/h_500,w_500,to_avif/" +
                   act.thumb
                 }
                 type="image/avif"
               />
               <source
                 srcSet={
-                  "https://img.csess.workers.dev/transform/h_500,w_500,to_webp/" +
+                  "https://assets.csess.workers.dev/images/h_500,w_500,to_webp/" +
                   act.thumb
                 }
                 type="image/webp"

@@ -128,19 +128,23 @@ function ActivityPage(props) {
               <picture>
                 <source
                   srcSet={
-                    "https://img.csess.workers.dev/transform/h_500,w_500,to_avif/" +
+                    "https://assets.csess.workers.dev/images/h_500,w_500,to_avif/" +
                     activity.thumb
                   }
                   type="image/avif"
                 />
                 <source
                   srcSet={
-                    "https://img.csess.workers.dev/transform/h_500,w_500,to_webp/" +
+                    "https://assets.csess.workers.dev/images/h_500,w_500,to_webp/" +
                     activity.thumb
                   }
                   type="image/webp"
                 />
-                <img src={activity.thumb} alt={activity.event} />
+                <img
+                  src={activity.thumb}
+                  alt={activity.event}
+                  className="thumb"
+                />
               </picture>
             )}
           </div>
