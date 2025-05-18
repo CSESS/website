@@ -6,6 +6,7 @@ export default defineConfig(() => {
   return {
     build: {
       outDir: "build",
+      target: ["es6"],
     },
     base: "/",
     plugins: [
