@@ -90,8 +90,8 @@ class currentActivitiesPage extends Component {
                       }
                       type="image/webp"
                     />
-                    <img src={act.thumb} alt={act.event} />
-                  </picture>
+                    <img src={act.thumb} alt={act.event} loading="lazy"/>                  
+                    </picture>
                 </div>
               </Link>
             );

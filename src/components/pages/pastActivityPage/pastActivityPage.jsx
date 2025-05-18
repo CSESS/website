@@ -95,6 +95,7 @@ class pastActivityPage extends Component {
                   onError={this.setDefaultSrc}
                   src={activity.thumb}
                   alt={activity.event}
+                  loading="lazy"
                 />
               </picture>
             </div>

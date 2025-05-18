@@ -144,6 +144,7 @@ function ActivityPage(props) {
                   src={activity.thumb}
                   alt={activity.event}
                   className="thumb"
+                  loading="lazy"
                 />
               </picture>
             )}

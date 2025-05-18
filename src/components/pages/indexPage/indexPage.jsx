@@ -112,7 +112,7 @@ class indexPage extends Component {
                 }
                 type="image/webp"
               />
-              <img src={act.thumb} alt={act.event} />
+              <img src={act.thumb} alt={act.event} loading="lazy"/>
             </picture>
           </div>
         </Link>
@@ -138,6 +138,7 @@ class indexPage extends Component {
           </div>
           <div className="thumb">
             <picture>
+              <img src={act.thumb} alt={act.event} loading="lazy"/>
               <source
                 srcSet={
                   "https://assets.csess.workers.dev/images/h_500,w_500,to_avif/" +
@@ -152,7 +153,6 @@ class indexPage extends Component {
                 }
                 type="image/webp"
               />
-              <img src={act.thumb} alt={act.event} />
             </picture>
           </div>
         </Link>

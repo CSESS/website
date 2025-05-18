@@ -20,6 +20,7 @@ export default function (props) {
           <img
             src="https://csess.su.hkust.edu.hk/home/images/history.jpg"
             alt="CSESS"
+            loading="lazy"
           />
         </div>
         <div>
