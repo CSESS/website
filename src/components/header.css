@@ -26,10 +26,9 @@
   .box-header {
     display: grid;
     grid-template-columns: 30px minmax(20px, 80px) 2fr 1fr 1fr 1fr 1fr 30px;
-    grid-template-rows: minmax(10px, 20px) minmax(40px, 80px) minmax(
-        10px,
-        30px
-      ) minmax(30px, 1fr) minmax(auto, 50px);
+    grid-template-rows:
+      minmax(10px, 20px) minmax(40px, 80px) minmax(10px, 30px)
+      minmax(30px, 1fr) minmax(auto, 50px);
   }
   .logo {
     grid-column: 2 / 3;

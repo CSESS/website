@@ -11,10 +11,9 @@
 @supports (display: grid) {
   .app {
     display: grid;
-    grid-template-columns: minmax(10px, 1fr) [content-start] minmax(
-        90%,
-        90vw
-      ) [content-end] minmax(10px, 1fr);
+    grid-template-columns:
+      minmax(10px, 1fr) [content-start] minmax(90%, 90vw)
+      [content-end] minmax(10px, 1fr);
     grid-template-rows: auto [content-start] 30vh auto [footer-start] 50px;
   }
   .topDecoration {
