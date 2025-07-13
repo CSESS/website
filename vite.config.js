@@ -16,8 +16,11 @@ export default defineConfig(() => {
       }),
       react(),
       VitePWA({
+        registerType: 'autoUpdate',
         workbox: {
-          navigateFallbackDenylist: [/^\/home/, /^\/api/],
+          navigateFallbackAllowlist: [
+            /^\/assets/
+          ],
         },
       }),
     ],
