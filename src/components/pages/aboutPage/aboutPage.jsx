@@ -26,11 +26,7 @@ export default function (props) {
         <div>
           <h2 className="highlighted">History</h2>
           <p>
-<<<<<<< HEAD
             The Computer Science and Engineering Students' Society, Hong
-=======
-            The Computer Science and Engineering Students' Society, the Hong
->>>>>>> 498f2a02ee21ab59b35a6c36b3eb31025e79aa4a
             Kong University of Science and Technology Students' Union (CSESS,
             HKUSTSU, or 香港科技大學學生會計算機科學及工程學系學生會) is
             affiliated to the Students' Union of Hong Kong University of Science

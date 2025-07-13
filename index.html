@@ -74,7 +74,6 @@
       media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
       rel="apple-touch-startup-image"
     />
-<<<<<<< HEAD
     <link rel="manifest" href="/manifest.json" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <title>
@@ -93,122 +92,10 @@
 
       gtag("config", "G-EVPS6XXWG1");
     </script>
-=======
-
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <!--
-      Notice the use of  in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>
-      The Computer Science and Engineering Students' Society, HKUSTSU
-    </title>
->>>>>>> 498f2a02ee21ab59b35a6c36b3eb31025e79aa4a
   </head>
   <body>
     <noscript> You need to enable JavaScript to run this app. </noscript>
     <div id="root"></div>
-<<<<<<< HEAD
-=======
-
-    <!-- Google Analytics Code -->
-    <script>
-      (function (a, b, c) {
-        var d = a.history,
-          e = document,
-          f = navigator || {},
-          g = localStorage,
-          h = encodeURIComponent,
-          i = d.pushState,
-          k = function () {
-            return Math.random().toString(36);
-          },
-          l = function () {
-            return g.cid || (g.cid = k()), g.cid;
-          },
-          m = function (r) {
-            var s = [];
-            for (var t in r)
-              r.hasOwnProperty(t) &&
-                void 0 !== r[t] &&
-                s.push(h(t) + "=" + h(r[t]));
-            return s.join("&");
-          },
-          n = function (r, s, t, u, v, w, x) {
-            var z = "https://www.google-analytics.com/collect",
-              A = m({
-                v: "1",
-                ds: "web",
-                aip: c.anonymizeIp ? 1 : void 0,
-                tid: b,
-                cid: l(),
-                t: r || "pageview",
-                sd:
-                  c.colorDepth && screen.colorDepth
-                    ? screen.colorDepth + "-bits"
-                    : void 0,
-                dr: e.referrer || void 0,
-                dt: e.title,
-                dl: e.location.origin + e.location.pathname + e.location.search,
-                ul: c.language ? (f.language || "").toLowerCase() : void 0,
-                de: c.characterSet ? e.characterSet : void 0,
-                sr: c.screenSize
-                  ? (a.screen || {}).width + "x" + (a.screen || {}).height
-                  : void 0,
-                vp:
-                  c.screenSize && a.visualViewport
-                    ? (a.visualViewport || {}).width +
-                      "x" +
-                      (a.visualViewport || {}).height
-                    : void 0,
-                ec: s || void 0,
-                ea: t || void 0,
-                el: u || void 0,
-                ev: v || void 0,
-                exd: w || void 0,
-                exf: "undefined" != typeof x && !1 == !!x ? 0 : void 0,
-              });
-            if (f.sendBeacon) f.sendBeacon(z, A);
-            else {
-              var y = new XMLHttpRequest();
-              y.open("POST", z, !0), y.send(A);
-            }
-          };
-        (d.pushState = function (r) {
-          return (
-            "function" == typeof d.onpushstate && d.onpushstate({ state: r }),
-            setTimeout(n, c.delay || 10),
-            i.apply(d, arguments)
-          );
-        }),
-          n(),
-          (a.ma = {
-            trackEvent: function o(r, s, t, u) {
-              return n("event", r, s, t, u);
-            },
-            trackException: function q(r, s) {
-              return n("exception", null, null, null, null, r, s);
-            },
-          });
-      })(window, "UA-102309552-1", {
-        anonymizeIp: true,
-        colorDepth: true,
-        characterSet: true,
-        screenSize: true,
-        language: true,
-      });
-    </script>
->>>>>>> 498f2a02ee21ab59b35a6c36b3eb31025e79aa4a
     <script type="module" src="/src/index.jsx"></script>
   </body>
 </html>
