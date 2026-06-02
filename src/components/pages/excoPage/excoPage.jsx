@@ -96,6 +96,19 @@ function excoPage() {
             );
         }
     }
+
+    function handleSelectChange(session) {
+        setSession(session)
+        fetch(
+            `https://csess.su.hkust.edu.hk/api/excos.php?session=${session}`
+        )
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                setExcos(data)
+            });
+    }
     return <div>
         <title>{`Excos | ${TITLE}`}</title>
         <div className="excoPage">
@@ -107,6 +120,7 @@ function excoPage() {
                         <Select
                             defaultValue={session}
                             options={sessionList}
+                            onSelect={handleSelectChange}
                         />
                         <h2>Session {session}</h2>{renderExcos()}</div>}
 
