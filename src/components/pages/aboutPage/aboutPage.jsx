@@ -26,8 +26,8 @@ export default function (props) {
         <div>
           <h2 className="highlighted">History</h2>
           <p>
-            The Computer Science and Engineering Students' Society, Hong
-            Kong University of Science and Technology Students' Union (CSESS,
+            The Computer Science and Engineering Students' Society, Hong Kong
+            University of Science and Technology Students' Union (CSESS,
             HKUSTSU, or 香港科技大學學生會計算機科學及工程學系學生會) is
             affiliated to the Students' Union of Hong Kong University of Science
             and Technology. CSESS, HKUSTSU was established in 1991, which was
