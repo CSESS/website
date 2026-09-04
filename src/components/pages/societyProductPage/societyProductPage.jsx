@@ -37,7 +37,15 @@ class societyProductPage extends Component {
               <div className="product-type">
                 <span>Bundle</span>
               </div>
-              <div className="product-price">{product.price}</div>
+              <div className="product-price">
+                {product.price}
+                <br />
+                {product.orderlink ? (
+                  <a href={product.orderlink}>Order Here</a>
+                ) : (
+                  ""
+                )}
+              </div>
             </div>
           );
         }
@@ -52,7 +60,15 @@ class societyProductPage extends Component {
             <div className="product-image">
               <img src={product.image} alt={product.type} />
             </div>
-            <div className="product-price">{product.price}</div>
+            <div className="product-price">
+              {product.price}
+              <br />
+              {product.orderlink ? (
+                <a href={product.orderlink}>Order Here</a>
+              ) : (
+                ""
+              )}
+            </div>
           </div>
         );
       });
